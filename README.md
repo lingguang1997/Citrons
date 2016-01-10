@@ -1,5 +1,5 @@
 - How to set up the project?
-  git clone https://github.com/lingguang1997/Elkhorns.git
+  git clone https://github.com/lingguang1997/Citrons.git
   git submodule update --init --recursive
 
 
