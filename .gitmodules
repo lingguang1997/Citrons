@@ -1,0 +1,6 @@
+[submodule "Citron/Submodules/AFNetworking"]
+	path = Citron/Submodules/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking.git
+[submodule "Citron/Submodules/AppKit"]
+	path = Citron/Submodules/AppKit
+	url = https://github.com/lingguang1997/AppKit.git
