@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CTMainViewController.h
 //  Citron
 //
 //  Created by Zijiao Liu on 1/10/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface CTMainViewController : UIViewController
 
 
 @end

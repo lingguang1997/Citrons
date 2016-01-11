@@ -1,15 +1,18 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B771CB1F72DDFA76B790C8AF7CFDFEF21ADA10DF",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : 0,
     "ACE7281F67218B98BE1B8CA8B80A5553A31E2B25" : 0,
-    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : 0
+    "B771CB1F72DDFA76B790C8AF7CFDFEF21ADA10DF" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C1C80DD8-51E2-4006-A1DB-E7BC62A341DD",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : "Citrons\/Citron\/Submodules\/AFNetworking\/",
     "ACE7281F67218B98BE1B8CA8B80A5553A31E2B25" : "Citrons\/Citron\/Submodules\/AppKit\/",
-    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : "Citrons\/Citron\/Submodules\/AFNetworking\/"
+    "B771CB1F72DDFA76B790C8AF7CFDFEF21ADA10DF" : "Citrons\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Citrons",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -19,6 +22,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lingguang1997\/AppKit.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ACE7281F67218B98BE1B8CA8B80A5553A31E2B25"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lingguang1997\/Citrons.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B771CB1F72DDFA76B790C8AF7CFDFEF21ADA10DF"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AFNetworking\/AFNetworking.git",
