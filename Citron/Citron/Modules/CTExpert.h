@@ -6,7 +6,6 @@
 //  Copyright © 2016 iAskData. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "CTUser.h"
 
 @class CTComment;
