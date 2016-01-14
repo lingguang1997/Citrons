@@ -658,6 +658,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Submodules/AppKit/build/Debug-iphoneos",
 				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iaskdata.Citron;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -677,6 +681,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Submodules/AppKit/build/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iaskdata.Citron;
 				PRODUCT_NAME = "$(TARGET_NAME)";
