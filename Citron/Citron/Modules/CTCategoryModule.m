@@ -1,15 +1,15 @@
 //
-//  CTStarExpertsModule.m
+//  CTCategoryModule.m
 //  Citron
 //
-//  Created by Zijiao Liu on 1/11/16.
+//  Created by Zijiao Liu on 1/15/16.
 //  Copyright © 2016 iAskData. All rights reserved.
 //
 
-#import "CTExpert.h"
-#import "CTStarExpertsModule.h"
+#import "CTCategoryModule.h"
 
-@implementation CTStarExpertsModule
+@implementation CTCategoryModule
+
 
 - (nonnull instancetype)initWithJSONDictionary:(nonnull NSDictionary *)jsonDict {
     self = [super init];
@@ -18,10 +18,10 @@
     return self;
 }
 
-- (nonnull instancetype)initWithExperts:(nonnull NSArray<CTExpert *> *)experts {
+- (instancetype)initWithCategories:(NSArray *)categories {
     self = [super init];
     if (self) {
-        _experts = experts;
+        _categories = categories;
     }
     return self;
 }
@@ -31,11 +31,11 @@
 }
 
 - (NSString *)identifier {
-    return @"StarExperts";
+    return @"Category";
 }
 
 - (NSArray *)data {
-    return _experts;
+    return _categories;
 }
 
 @end

@@ -6,13 +6,13 @@
 //  Copyright © 2016 iAskData. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <AppKit/AKDataModule.h>
 
 @class CTExpert;
 
-@interface CTStarExpertsModule : NSObject
+@interface CTStarExpertsModule : NSObject <AKDataModule>
 
-@property (nonatomic, nonnull) NSArray<CTExpert *> *experts;
+@property (nonatomic, readonly , nonnull) NSArray<CTExpert *> *experts;
 
 - (nonnull instancetype)init NS_UNAVAILABLE;
 - (nonnull instancetype)initWithJSONDictionary:(nonnull NSDictionary *)jsonDict NS_DESIGNATED_INITIALIZER;

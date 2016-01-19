@@ -30,7 +30,7 @@ static CGFloat const kHeight = 32;
 
         _titleLabel = [UILabel new];
         _titleLabel.font = [UIFont ct_appFontWithSize:28];
-        _titleLabel.textColor = [UIColor ct_textBlueColor];
+        _titleLabel.textColor = [UIColor ct_textDarkBlueColor];
         [self.contentView addSubview:_titleLabel];
 
         _dismissButton = [UIButton new];
@@ -39,6 +39,7 @@ static CGFloat const kHeight = 32;
         [_dismissButton addTarget:self action:@selector(_dismissButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:_dismissButton];
         _dismissButton.hidden = YES;
+        self.groupInnerColor = [UIColor redColor];
     }
     return self;
 }
@@ -61,8 +62,8 @@ static CGFloat const kHeight = 32;
     }
 }
 
-- (void)updateWithItem:(id)item {
-    _titleLabel.text = @"专家服务流程";
+- (void)updateWithItem:(NSString *)title {
+    _titleLabel.text = title;
 }
 
 + (CGFloat)heightForItem:(id)item fixedWidth:(CGFloat)fixedWidth {

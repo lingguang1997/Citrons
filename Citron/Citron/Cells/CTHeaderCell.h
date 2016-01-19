@@ -6,9 +6,9 @@
 //  Copyright © 2016 iAskData. All rights reserved.
 //
 
-#import <AppKit/AKCell.h>
+#import <AppKit/AKTableViewCell.h>
 
-@interface CTHeaderCell : UITableViewCell <AKCell>
+@interface CTHeaderCell :AKTableViewCell
 
 @property (nonatomic, getter=isDismissable) BOOL dismissable;
 

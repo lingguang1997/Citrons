@@ -11,7 +11,7 @@
 @implementation UIImage (CTImage)
 
 + (instancetype)ct_profilePlaceHolder {
-    return [UIImage imageNamed:@"ProfilePlaceHolder"];
+    return [UIImage imageNamed:@"ProfilePlaceholder"];
 }
 
 @end

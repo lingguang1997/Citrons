@@ -6,12 +6,18 @@
 //  Copyright © 2016 iAskData. All rights reserved.
 //
 
+#import "CTCategoryModule.h"
+#import "CTCategorySectionController.h"
+#import "CTHeaderCellAdapter.h"
 #import "CTHomeStream.h"
 #import "CTHomeViewController.h"
 #import "CTInstructionCellAdapter.h"
-#import "CTHeaderCellAdapter.h"
-#import "CTStarExpertsCellAdapter.h"
+#import "CTInstructionModule.h"
+#import "CTInstructionSectionController.h"
+#import "CTRecommendedExpertModule.h"
+#import "CTRecommendedExpertSectionController.h"
 #import "CTStarExpertsModule.h"
+#import "CTStarExpertSectionController.h"
 
 @implementation CTHomeViewController
 
@@ -19,9 +25,12 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [self _setUpTabBarItem];
-        [self registerAdapter:[CTStarExpertsCellAdapter new] forItemClass:[CTStarExpertsModule class]];
-        [self registerAdapter:[CTHeaderCellAdapter new] forItemClass:[NSString class]];
-        [self registerAdapter:[CTInstructionCellAdapter new] forItemClass:[UIImage class]];
+        [self registerSectionController:[CTStarExpertSectionController new] forDataModuleClass:[CTStarExpertsModule class]];
+        [self registerSectionController:[CTInstructionSectionController new] forDataModuleClass:[CTInstructionModule class]];
+        [self registerSectionController:[CTRecommendedExpertSectionController new] forDataModuleClass:[CTRecommendedExpertModule class]];
+//        [self registerSectionController:[CTCategorySectionController new] forDataModuleClass:[CTCategoryModule class]];
+//        [self registerAdapter:[CTStarExpertsCellAdapter new] forItemClass:[CTStarExpertsModule class]];
+//        [self registerAdapter:[CTHeaderCellAdapter new] forItemClass:[NSString class]];
     }
     return self;
 }

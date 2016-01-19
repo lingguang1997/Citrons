@@ -18,8 +18,12 @@
     return [UIColor grayColor];
 }
 
-+ (instancetype)ct_textBlueColor {
++ (instancetype)ct_textDarkBlueColor {
     return [UIColor colorWithRed:62.0 / 255 green:102.0 / 255 blue:112.0 / 255 alpha:1];
+}
+
++ (instancetype)ct_lightBlueColor {
+    return [UIColor colorWithRed: 43.0 / 255 green: 175.0 / 255 blue: 243.0 / 255 alpha:1];
 }
 
 @end

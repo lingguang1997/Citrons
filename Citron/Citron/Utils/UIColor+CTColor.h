@@ -12,6 +12,7 @@
 
 + (instancetype)ct_blueColor;
 + (instancetype)ct_grayColor;
-+ (instancetype)ct_textBlueColor;
++ (instancetype)ct_textDarkBlueColor;
++ (instancetype)ct_lightBlueColor;
 
 @end

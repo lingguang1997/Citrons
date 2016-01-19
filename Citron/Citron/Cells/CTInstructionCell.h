@@ -6,8 +6,8 @@
 //  Copyright © 2016 iAskData. All rights reserved.
 //
 
-#import <AppKit/AKCell.h>
+#import <AppKit/AKTableViewCell.h>
 
-@interface CTInstructionCell : UITableViewCell <AKCell>
+@interface CTInstructionCell : AKTableViewCell
 
 @end

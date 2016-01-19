@@ -18,6 +18,6 @@
 
 - (nonnull instancetype)init NS_UNAVAILABLE;
 - (nonnull instancetype)initWithJSONDictionary:(nonnull NSDictionary *)jsonDict NS_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithTitle:(nonnull NSString *)title price:(NSInteger)price salePrice:(NSInteger)salePrice detail:(nonnull NSString *)detail duration:(CGFloat)duration NS_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTitle:(nonnull NSString *)title price:(NSInteger)price salePrice:(NSInteger)salePrice detail:(nonnull NSString *)detail duration:(CGFloat)duration /* in hour */ NS_DESIGNATED_INITIALIZER;
 
 @end

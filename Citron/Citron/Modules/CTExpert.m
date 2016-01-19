@@ -17,7 +17,7 @@
     return self;
 }
 
-- (instancetype)initWithID:(NSString *)ID name:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber title:(NSString *)title schoole:(NSString *)school degree:(NSString *)degree tags:(NSArray<NSString *> *)tags topics:(NSArray<CTTopic *> *)topics bio:(NSString *)bio links:(NSArray<NSString *> *)links commentsFromExperts:(NSArray<CTComment *> *)commentFromExperts commentsFromUsers:(NSArray<CTComment *> *)commentsFromUsers {
+- (instancetype)initWithID:(NSString *)ID name:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber title:(NSString *)title schoole:(NSString *)school degree:(NSString *)degree tags:(NSArray<NSString *> *)tags topics:(NSArray<CTTopic *> *)topics bio:(NSString *)bio links:(NSArray<NSString *> *)links credits:(NSInteger)credits commentsFromExperts:(NSArray<CTComment *> *)commentFromExperts commentsFromUsers:(NSArray<CTComment *> *)commentsFromUsers profileImageURL:(NSString *)profileImageURL {
     self = [super initWithID:ID name:name email:email phoneNumber:phoneNumber];
     if (self) {
         _title = title;
@@ -27,8 +27,10 @@
         _topics = topics;
         _bio = bio;
         _links = links;
+        _credits = credits;
         _commentsFromExperts = commentFromExperts;
         _commentsFromUsers = commentsFromUsers;
+        _profileImageURL = profileImageURL;
     }
     return self;
 }

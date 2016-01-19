@@ -1,24 +1,23 @@
 //
-//  CTStarExpertsModule.m
+//  CTRecommendedExpertModule.m
 //  Citron
 //
-//  Created by Zijiao Liu on 1/11/16.
+//  Created by Zijiao Liu on 1/15/16.
 //  Copyright © 2016 iAskData. All rights reserved.
 //
 
-#import "CTExpert.h"
-#import "CTStarExpertsModule.h"
+#import "CTRecommendedExpertModule.h"
 
-@implementation CTStarExpertsModule
+@implementation CTRecommendedExpertModule
 
-- (nonnull instancetype)initWithJSONDictionary:(nonnull NSDictionary *)jsonDict {
+- (instancetype)initWithJSONDictionary:(NSDictionary *)jsonDict {
     self = [super init];
     if (self) {
     }
     return self;
 }
 
-- (nonnull instancetype)initWithExperts:(nonnull NSArray<CTExpert *> *)experts {
+- (instancetype)initWithExperts:(NSArray *)experts {
     self = [super init];
     if (self) {
         _experts = experts;
@@ -31,7 +30,7 @@
 }
 
 - (NSString *)identifier {
-    return @"StarExperts";
+    return @"CTRecommendedExpertModule";
 }
 
 - (NSArray *)data {
