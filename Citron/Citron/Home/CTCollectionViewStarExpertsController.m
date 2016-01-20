@@ -15,8 +15,6 @@
     self = [super init];
     if (self) {
         [self.collectionView registerClass:[CTStartExpertCell class] forCellWithReuseIdentifier:@"CTStartExpertCell"];
-//        AKCollectionViewLineLayout *layout = (AKCollectionViewLineLayout *)self.collectionView.collectionViewLayout;
-//        layout.zoomAllowed = YES;
     }
     return self;
 }

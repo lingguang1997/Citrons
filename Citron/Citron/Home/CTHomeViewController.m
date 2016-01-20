@@ -28,9 +28,6 @@
         [self registerSectionController:[CTStarExpertSectionController new] forDataModuleClass:[CTStarExpertsModule class]];
         [self registerSectionController:[CTInstructionSectionController new] forDataModuleClass:[CTInstructionModule class]];
         [self registerSectionController:[CTRecommendedExpertSectionController new] forDataModuleClass:[CTRecommendedExpertModule class]];
-//        [self registerSectionController:[CTCategorySectionController new] forDataModuleClass:[CTCategoryModule class]];
-//        [self registerAdapter:[CTStarExpertsCellAdapter new] forItemClass:[CTStarExpertsModule class]];
-//        [self registerAdapter:[CTHeaderCellAdapter new] forItemClass:[NSString class]];
     }
     return self;
 }
