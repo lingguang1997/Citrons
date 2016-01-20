@@ -19,6 +19,7 @@
 
 - (void)update {
     // hit server
+    [super update];
     [self _parseExpertsModule];
 //    [self _parseCategories];
     [self _parseInsturctions];
