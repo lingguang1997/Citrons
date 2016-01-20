@@ -43,4 +43,8 @@
     return [CTStartExpertCell heightForItem:[module.data firstObject] fixedWidth:fixedWidth];
 }
 
++ (CGFloat)heightForItem:(id)item fixedWidth:(CGFloat)fixedWidth groupStyle:(AKTableViewCellGroupStyle)groupStyle groupBorderWidth:(CGFloat)groupBorderWidth isSeperatorEnabled:(BOOL)seperatorEnabled seperatorHeight:(CGFloat)seperatorHeight {
+    return 0;
+}
+
 @end

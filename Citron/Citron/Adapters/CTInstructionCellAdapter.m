@@ -12,11 +12,11 @@
 
 @implementation CTInstructionCellAdapter
 
-- (CGFloat)dataViewController:(AKDataViewController *)dataViewController item:(id)item heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [CTInstructionCell heightForItem:item fixedWidth:CGRectGetWidth(dataViewController.view.frame)];
+- (CGFloat)dataViewController:(AKDataViewController *)dataViewController item:(id<NSObject>)item groupStyle:(AKTableViewCellGroupStyle)groupStyle seperatorEnabled:(BOOL)seperatorEnabled heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [CTInstructionCell heightForItem:item groupStyle:groupStyle seperatorEnabled:seperatorEnabled fixedWidth:CGRectGetWidth(dataViewController.view.frame)];
 }
 
-- (UITableViewCell<AKCell> *)dataViewController:(AKDataViewController *)dataViewController item:(id)item cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (AKTableViewCell *)dataViewController:(AKDataViewController *)dataViewController item:(id)item cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CTInstructionCell *cell = [[CTInstructionCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CTInstructionCell"];
     return cell;
 }

@@ -7,18 +7,27 @@
 //
 
 #import <AFNetworking/UIImageView+AFNetworking.h>
+#import <AppKit/NSString+AKDrawing.h>
 #import "CTExpert.h"
 #import "CTRecommendedExpertCell.h"
 #import "UIColor+CTColor.h"
 #import "UIFont+CTFont.h"
 #import "UIImage+CTImage.h"
 
+static CGFloat const kTopPadding = 15;
+static CGFloat const kLeftPadding = 10;
+static CGFloat const kProfileImageViewDimension = 45.5;
+static CGFloat const kNameTopPadding = 15;
+static CGFloat const kHeight = 108;
+
 @implementation CTRecommendedExpertCell
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         _profileImageView = [UIImageView new];
+        _profileImageView.layer.cornerRadius = kProfileImageViewDimension / 2;
+        _profileImageView.clipsToBounds = YES;
         [self.contentView addSubview:_profileImageView];
 
         _nameLabel = [UILabel new];
@@ -49,6 +58,13 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+
+    _profileImageView.frame = CGRectMake(kLeftPadding, kTopPadding, kProfileImageViewDimension, kProfileImageViewDimension);
+    CGRect nameFrame = [_nameLabel.text ak_boundingRectWithFont:_nameLabel.font size:_profileImageView.frame.size];
+    _nameLabel.frame = nameFrame;
+    _nameLabel.center = CGPointMake(_profileImageView.center.x, CGRectGetMaxY(_profileImageView.frame) + CGRectGetHeight(_nameLabel.frame) / 2);
+    _nameLabel.backgroundColor = [UIColor blueColor];
+    
 }
 
 - (void)prepareForReuse {
@@ -81,7 +97,7 @@
 }
 
 + (CGFloat)heightForItem:(id)item fixedWidth:(CGFloat)fixedWidth {
-    return 50;
+    return kHeight;
 }
 
 @end

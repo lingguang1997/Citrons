@@ -20,7 +20,7 @@
 - (void)update {
     // hit server
     [self _parseExpertsModule];
-    [self _parseCategories];
+//    [self _parseCategories];
     [self _parseInsturctions];
     [self _parseRecommendedExperts];
     [self.delegate streamDidUpdate];

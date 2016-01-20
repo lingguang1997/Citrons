@@ -12,21 +12,13 @@ static CGFloat const kInstructionCellHeight = 63;
 
 @implementation CTInstructionCell
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        self.groupInnerColor = [UIColor yellowColor];
-    }
-    return self;
-}
-
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.imageView.frame = self.bounds;
+    self.imageView.frame = CGRectInset(self.contentView.bounds, 10, 5);
 }
 
 - (void)updateWithItem:(id)item {
-    self.imageView.image = [UIImage imageNamed:@"instruction"];
+    self.imageView.image = [UIImage imageNamed:@"Instruction"];
     [self setNeedsLayout];
 }
 

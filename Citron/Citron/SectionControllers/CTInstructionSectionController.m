@@ -6,6 +6,7 @@
 //  Copyright © 2016 iAskData. All rights reserved.
 //
 
+#import "CTHeaderCell.h"
 #import "CTHeaderCellAdapter.h"
 #import "CTInstructionCellAdapter.h"
 #import "CTInstructionModule.h"
@@ -21,6 +22,14 @@
         [self registerAdapter:[CTInstructionCellAdapter new] forItemClass:[UIImage class]];
     }
     return self;
+}
+
+- (AKTableViewCell *)dataViewController:(AKDataViewController *)dataViewController item:(id<NSObject>)item cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CTHeaderCell *cell = (CTHeaderCell *)[super dataViewController:dataViewController item:item cellForRowAtIndexPath:indexPath];
+    if (indexPath.row == 0) {
+        cell.dismissable = YES;
+    }
+    return cell;
 }
 
 @end

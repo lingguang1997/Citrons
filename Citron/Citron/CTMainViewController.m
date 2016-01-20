@@ -24,8 +24,10 @@
     UITabBarController *tabBarContoller = [UITabBarController new];
 
     CTHomeViewController *homeViewController = [CTHomeViewController new];
+    UINavigationController *homeNC = [[UINavigationController alloc] initWithRootViewController:homeViewController];
+
     CTHomeViewController *h1 = [CTHomeViewController new];
-    tabBarContoller.viewControllers = @[homeViewController, h1];
+    tabBarContoller.viewControllers = @[homeNC, h1];
 
     [self addChildViewController:tabBarContoller];
     [self.view addSubview:tabBarContoller.view];

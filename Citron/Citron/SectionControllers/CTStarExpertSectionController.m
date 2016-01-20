@@ -23,7 +23,7 @@
 }
 
 - (CGFloat)dataViewController:(AKDataViewController *)dataViewController item:(CTStarExpertsModule *)module heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [CTStarExpertsCell heightForItem:module fixedWidth:CGRectGetWidth(dataViewController.view.frame)];
+    return [CTStarExpertsCell heightForItem:module groupStyle:AKTableViewCellGroupStyleNone seperatorEnabled:NO fixedWidth:CGRectGetWidth(dataViewController.view.frame)];
 }
 
 - (UITableViewCell *)dataViewController:(AKDataViewController *)dataViewController item:(CTStarExpertsModule *)module cellForRowAtIndexPath:(NSIndexPath *)indexPath {

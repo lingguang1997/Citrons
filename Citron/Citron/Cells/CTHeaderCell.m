@@ -6,11 +6,14 @@
 //  Copyright © 2016 iAskData. All rights reserved.
 //
 
+#import <AppKit/NSString+AKDrawing.h>
 #import "CTHeaderCell.h"
 #import "UIColor+CTColor.h"
 #import "UIFont+CTFont.h"
 
 static CGFloat const kHeight = 32;
+static CGFloat const kLeftPadding = 11;
+static CGFloat const kHPadding = 7;
 
 @interface CTHeaderCell ()
 
@@ -29,17 +32,17 @@ static CGFloat const kHeight = 32;
         [self.contentView addSubview:_iconImageView];
 
         _titleLabel = [UILabel new];
-        _titleLabel.font = [UIFont ct_appFontWithSize:28];
+        _titleLabel.font = [UIFont ct_appFontWithSize:14];
         _titleLabel.textColor = [UIColor ct_textDarkBlueColor];
         [self.contentView addSubview:_titleLabel];
 
         _dismissButton = [UIButton new];
-        [_dismissButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-        [_dismissButton setImage:[UIImage imageNamed:@""] forState:UIControlStateHighlighted];
+        UIImage *crossImage = [UIImage imageNamed:@"CrossIcon"];
+        [_dismissButton setImage:crossImage forState:UIControlStateNormal];
+        [_dismissButton setImage:crossImage forState:UIControlStateHighlighted];
         [_dismissButton addTarget:self action:@selector(_dismissButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:_dismissButton];
         _dismissButton.hidden = YES;
-        self.groupInnerColor = [UIColor redColor];
     }
     return self;
 }
@@ -47,12 +50,15 @@ static CGFloat const kHeight = 32;
 - (void)layoutSubviews {
     [super layoutSubviews];
     CGRect iconImageViewFrame = _iconImageView.frame;
-    iconImageViewFrame.origin = CGPointMake(22, 28);
+    iconImageViewFrame.origin = CGPointMake(kLeftPadding, 11);
     _iconImageView.frame = iconImageViewFrame;
 
-    _dismissButton.frame = CGRectMake(661, 21, 10, 10);
+    CGRect canvasBounds = self.contentView.bounds;
+    _dismissButton.frame = CGRectMake(CGRectGetWidth(canvasBounds) - 10 - kLeftPadding, CGRectGetMinY(iconImageViewFrame), 10, 10);
 
-    _titleLabel.frame = CGRectMake(43, 27, CGRectGetWidth(self.bounds) - 43 - 43, 63);
+    CGFloat titleLabelWidth = CGRectGetWidth(self.contentView.bounds) - CGRectGetMaxX(iconImageViewFrame) - kLeftPadding * 2;
+    CGFloat titleLabelHeight = [_titleLabel.text ak_HeightWithFont:_titleLabel.font fixedWidth:titleLabelWidth];
+    _titleLabel.frame = CGRectMake(CGRectGetMaxX(iconImageViewFrame) + kHPadding, (CGRectGetHeight(canvasBounds) - titleLabelHeight) / 2, titleLabelWidth, titleLabelHeight);
 }
 
 - (void)setDismissable:(BOOL)dismissable {
