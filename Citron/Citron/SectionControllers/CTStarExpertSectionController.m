@@ -31,8 +31,4 @@
     return cell;
 }
 
-- (NSInteger)dataViewController:(AKDataViewController *)dataViewController item:(CTStarExpertsModule *)module numberOfRowsInSection:(NSInteger)section {
-    return 1;
-}
-
 @end

@@ -12,8 +12,8 @@
 
 @implementation CTHeaderCellAdapter
 
-- (CGFloat)dataViewController:(AKDataViewController *)dataViewController item:(id)item heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [CTHeaderCell heightForItem:item fixedWidth:CGRectGetWidth(dataViewController.view.frame)];
+- (CGFloat)dataViewController:(AKDataViewController *)dataViewController item:(id<NSObject>)item groupStyle:(AKTableViewCellGroupStyle)groupStyle seperatorEnabled:(BOOL)seperatorEnabled heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [CTHeaderCell heightForItem:item groupStyle:groupStyle seperatorEnabled:seperatorEnabled fixedWidth:CGRectGetWidth(dataViewController.view.frame)];
 }
 
 - (UITableViewCell<AKCell> *)dataViewController:(AKDataViewController *)dataViewController item:(id)item cellForRowAtIndexPath:(NSIndexPath *)indexPath {
