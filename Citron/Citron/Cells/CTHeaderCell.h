@@ -8,7 +8,7 @@
 
 #import <AppKit/AKTableViewCell.h>
 
-@interface CTHeaderCell :AKTableViewCell
+@interface CTHeaderCell : AKTableViewCell
 
 @property (nonatomic, getter=isDismissable) BOOL dismissable;
 

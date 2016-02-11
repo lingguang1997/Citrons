@@ -10,6 +10,8 @@
 
 @interface UIImage (CTImage)
 
-+ (instancetype)ct_profilePlaceHolder;
++ (nonnull instancetype)ct_profilePlaceHolder;
++ (nonnull instancetype)ct_imageWithColor:(nonnull UIColor *)color;
++ (nonnull instancetype)ct_imageWithColor:(nonnull UIColor *)color size:(CGSize)size;
 
 @end

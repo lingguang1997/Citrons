@@ -17,7 +17,6 @@
 static CGFloat const kTopPadding = 15;
 static CGFloat const kLeftPadding = 10;
 static CGFloat const kProfileImageViewDimension = 45.5;
-static CGFloat const kNameTopPadding = 15;
 static CGFloat const kHeight = 108;
 
 @implementation CTRecommendedExpertCell

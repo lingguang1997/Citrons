@@ -14,5 +14,7 @@
 + (instancetype)ct_grayColor;
 + (instancetype)ct_textDarkBlueColor;
 + (instancetype)ct_lightBlueColor;
++ (instancetype)ct_yellowColor;
++ (instancetype)ct_transparentWhiteColor;
 
 @end

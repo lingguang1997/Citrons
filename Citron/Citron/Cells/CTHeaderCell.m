@@ -39,7 +39,7 @@ static CGFloat const kHPadding = 7;
         _dismissButton = [UIButton new];
         UIImage *crossImage = [UIImage imageNamed:@"CrossIcon"];
         [_dismissButton setImage:crossImage forState:UIControlStateNormal];
-        [_dismissButton setImage:crossImage forState:UIControlStateHighlighted];
+        [_dismissButton setImage:crossImage forState:UIControlStateSelected];
         [_dismissButton addTarget:self action:@selector(_dismissButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:_dismissButton];
         _dismissButton.hidden = YES;
@@ -77,7 +77,7 @@ static CGFloat const kHPadding = 7;
 }
 
 - (void)_dismissButtonTapped:(id)sender {
-    
+    NSLog(@"button pressed");
 }
 
 @end

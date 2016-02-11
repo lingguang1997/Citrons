@@ -14,4 +14,8 @@
     return [UIFont fontWithName:@"Helvetica" size:size];
 }
 
++ (instancetype)ct_appBoldFontWithSize:(CGFloat)size {
+    return [UIFont fontWithName:@"Helvetica-Bold" size:size];
+}
+
 @end

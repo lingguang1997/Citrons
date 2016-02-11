@@ -6,10 +6,18 @@
 //  Copyright © 2016 iAskData. All rights reserved.
 //
 
+//#import <TLSSDK/TLSAccountHelper.h>
+//#import <TLSSDK/TLSLoginHelper.h>
+//#import <ImSDK/ImSDK.h>
 #import "AppDelegate.h"
 #import "CTMainViewController.h"
+#import "CTSettings.h"
+#import "CTWXHTTPSessionManager.h"
 
-@interface AppDelegate ()
+#import <AppKit/NSString+AKContent.h>
+//#import "WXApi.h"
+
+@interface AppDelegate () //<WXApiDelegate>
 
 @end
 
@@ -20,6 +28,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [CTMainViewController new];
     [self.window makeKeyAndVisible];
+//    [self _registerQCloud];
+
     return YES;
 }
 
@@ -44,5 +54,37 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+//    return [WXApi handleOpenURL:url delegate:self];
+//}
+//
+//# pragma mark - WXApiDelegate
+//
+//- (void)onReq:(BaseReq *)req {
+//    NSLog(@"%s", __PRETTY_FUNCTION__);
+//}
+//
+//- (void)onResp:(BaseResp *)resp {
+//    NSLog(@"%s", __PRETTY_FUNCTION__);
+//}
+//
+//# pragma mark - Private methods
+//
+//- (void)_registerQCloud {
+//    // Init QCloud SDK
+//    [[TIMManager sharedInstance] setEnv:TLS_SDK_ENV_VALUE];
+//    [[TIMManager sharedInstance] initSdk:TLS_SDK_APP_ID accountType:[NSString stringWithFormat:@"%d", TLS_SDK_ACCOUNT_TYPE]];
+//
+//    // Init login and account helpers
+//    // The warning is caused by poor Tencent code
+//    [[TLSLoginHelper getInstance] init:TLS_SDK_APP_ID andAccountType:TLS_SDK_ACCOUNT_TYPE andAppVer:APP_VERSION];
+//    [[TLSAccountHelper getInstance] init:TLS_SDK_APP_ID andAccountType:TLS_SDK_ACCOUNT_TYPE andAppVer:APP_VERSION];
+//    [[TLSLoginHelper getInstance] setLogcat:YES];
+//
+//    // Allow Weixin login
+//    [WXApi registerApp:WXOpenID];
+//}
+
 
 @end

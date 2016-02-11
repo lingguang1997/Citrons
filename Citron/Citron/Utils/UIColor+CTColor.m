@@ -26,4 +26,12 @@
     return [UIColor colorWithRed: 43.0 / 255 green: 175.0 / 255 blue: 243.0 / 255 alpha:1];
 }
 
++ (instancetype)ct_yellowColor {
+    return [UIColor colorWithRed: 254.0 / 255 green: 200.0 / 255 blue: 60.0 / 255 alpha:1];
+}
+
++ (instancetype)ct_transparentWhiteColor {
+    return [UIColor colorWithRed:1 green:1 blue:1 alpha:.4];
+}
+
 @end

@@ -11,5 +11,6 @@
 @interface UIFont (CTFont)
 
 + (instancetype)ct_appFontWithSize:(CGFloat)size;
++ (instancetype)ct_appBoldFontWithSize:(CGFloat)size;
 
 @end
