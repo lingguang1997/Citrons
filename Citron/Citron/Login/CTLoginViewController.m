@@ -167,7 +167,7 @@ static CGFloat const kCornerRadius = 3;
     [policyButton addTarget:self action:@selector(_policyButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:policyButton];
     UILabel *policyLabel = [[UILabel alloc] initWithFrame:policyButton.bounds];
-    NSString *whiteText = @"点击登录即代表同意书问的";
+    NSString *whiteText = @"点击登录即代表同意数问的";
     NSString *blueText = @"用户协议";
     NSString *text = [NSString stringWithFormat:@"%@%@", whiteText, blueText];
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:text];

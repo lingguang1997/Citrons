@@ -17,9 +17,7 @@ static NSInteger const kSteps = 3;
 static CGFloat const kStepBarHeight = 5;
 static CGFloat const kBarVPadding = 5;
 static CGFloat const kCornerRadius = 3;
-//static CGFloat const kNextButtonHeight = 50;
 static CGFloat const kBarHeight = 45;
-
 static CGFloat const kHPadding = 25;
 
 
