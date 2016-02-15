@@ -37,7 +37,7 @@ static CGFloat const kHPadding = 7;
         [self.contentView addSubview:_titleLabel];
 
         _dismissButton = [UIButton new];
-        UIImage *crossImage = [UIImage imageNamed:@"CrossIcon"];
+        UIImage *crossImage = [UIImage imageNamed:@"BlueDismissIcon"];
         [_dismissButton setImage:crossImage forState:UIControlStateNormal];
         [_dismissButton setImage:crossImage forState:UIControlStateSelected];
         [_dismissButton addTarget:self action:@selector(_dismissButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -77,7 +77,9 @@ static CGFloat const kHPadding = 7;
 }
 
 - (void)_dismissButtonTapped:(id)sender {
-    NSLog(@"button pressed");
+    UITableView *tableView = self.tableView;
+    NSIndexPath *indexPath = [tableView indexPathForCell:self];
+    [tableView.dataSource tableView:tableView commitEditingStyle:UITableViewCellEditingStyleDelete forRowAtIndexPath:indexPath];
 }
 
 @end

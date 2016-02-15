@@ -22,9 +22,15 @@
     [super update];
     [self _parseExpertsModule];
 //    [self _parseCategories];
+    [self _insertPadding];
     [self _parseInsturctions];
+    [self _insertPadding];
     [self _parseRecommendedExperts];
     [self.delegate streamDidUpdate];
+}
+
+- (void)_insertPadding {
+    [self.items addObject:@[@""]];
 }
 
 - (void)_parseExpertsModule {
@@ -48,7 +54,7 @@
 }
 
 - (void)_parseInsturctions {
-    CTInstructionModule *module = [[CTInstructionModule alloc] initWithHeader:@"专家服务流程" instructionImageName:@"Instruction"];
+    CTInstructionModule *module = [[CTInstructionModule alloc] initWithHeader:@"专家服务流程" steps:4];
     [self.items addObject:module];
 }
 

@@ -17,11 +17,11 @@
     return self;
 }
 
-- (instancetype)initWithHeader:(NSString *)header instructionImageName:(NSString *)instructionImageName {
+- (instancetype)initWithHeader:(NSString *)header steps:(NSInteger)steps {
     self = [super init];
     if (self) {
         _header = header;
-        _instructionImage = [UIImage imageNamed:instructionImageName];
+        _steps = steps;
     }
     return self;
 }
@@ -35,7 +35,7 @@
 }
 
 - (NSArray *)data {
-    return @[_header, _instructionImage];
+    return @[_header, @(_steps)];
 }
 
 @end

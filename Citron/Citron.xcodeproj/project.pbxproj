@@ -100,6 +100,8 @@
 		CE5C1B721C4CDB920093D0C8 /* CTCollectionViewStarExpertsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5C1B701C4CDB920093D0C8 /* CTCollectionViewStarExpertsController.m */; };
 		CE5C1B731C4CDB920093D0C8 /* CTCollectionViewStarExpertsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5C1B701C4CDB920093D0C8 /* CTCollectionViewStarExpertsController.m */; };
 		CE6CAFC31C6CE96D0068BBC1 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6CAFC21C6CE96D0068BBC1 /* AFNetworking.framework */; };
+		CE6CAFC71C6CFF500068BBC1 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5FEEC71C699FFB0046045F /* AFNetworking.framework */; };
+		CE6CAFC81C6CFF500068BBC1 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE5FEEC71C699FFB0046045F /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CED78F431C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CED78F421C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m */; };
 		CED78F441C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CED78F421C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m */; };
 		CED78F451C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CED78F421C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m */; };
@@ -138,6 +140,20 @@
 			remoteInfo = Citron;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE6CAFC91C6CFF500068BBC1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE6CAFC81C6CFF500068BBC1 /* AFNetworking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CE00E0DF1C487B0800E7474D /* CTStarExpertSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTStarExpertSectionController.h; sourceTree = "<group>"; };
@@ -241,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6CAFC31C6CE96D0068BBC1 /* AFNetworking.framework in Frameworks */,
+				CE6CAFC71C6CFF500068BBC1 /* AFNetworking.framework in Frameworks */,
 				CEF1F5A51C50BFCF0062B243 /* SystemConfiguration.framework in Frameworks */,
 				CEF1F5A31C50BFBC0062B243 /* CoreTelephony.framework in Frameworks */,
 				CE57D4A31C4391A300DB72C4 /* libAppKit.a in Frameworks */,
@@ -502,6 +519,7 @@
 				CE46E8EB1C423D820075CA29 /* Sources */,
 				CE46E8EC1C423D820075CA29 /* Frameworks */,
 				CE46E8ED1C423D820075CA29 /* Resources */,
+				CE6CAFC91C6CFF500068BBC1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

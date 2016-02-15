@@ -19,7 +19,7 @@
     if (self) {
         self.grouped = YES;
         [self registerAdapter:[CTHeaderCellAdapter new] forItemClass:[NSString class]];
-        [self registerAdapter:[CTInstructionCellAdapter new] forItemClass:[UIImage class]];
+        [self registerAdapter:[CTInstructionCellAdapter new] forItemClass:[NSNumber class]];
     }
     return self;
 }
