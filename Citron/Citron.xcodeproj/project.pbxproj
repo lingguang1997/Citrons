@@ -102,6 +102,18 @@
 		CE6CAFC31C6CE96D0068BBC1 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6CAFC21C6CE96D0068BBC1 /* AFNetworking.framework */; };
 		CE6CAFC71C6CFF500068BBC1 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5FEEC71C699FFB0046045F /* AFNetworking.framework */; };
 		CE6CAFC81C6CFF500068BBC1 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE5FEEC71C699FFB0046045F /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE6CAFFB1C7232E70068BBC1 /* CTExpertDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CAFFA1C7232E70068BBC1 /* CTExpertDetailViewController.m */; };
+		CE6CAFFC1C7232E70068BBC1 /* CTExpertDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CAFFA1C7232E70068BBC1 /* CTExpertDetailViewController.m */; };
+		CE6CAFFD1C7232E70068BBC1 /* CTExpertDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CAFFA1C7232E70068BBC1 /* CTExpertDetailViewController.m */; };
+		CE6CB0001C725C4C0068BBC1 /* CTExpertSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CAFFF1C725C4C0068BBC1 /* CTExpertSummaryView.m */; };
+		CE6CB0011C725C4C0068BBC1 /* CTExpertSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CAFFF1C725C4C0068BBC1 /* CTExpertSummaryView.m */; };
+		CE6CB0021C725C4C0068BBC1 /* CTExpertSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CAFFF1C725C4C0068BBC1 /* CTExpertSummaryView.m */; };
+		CE955E1B1C72C6A40040C70E /* CTTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE955E1A1C72C6A40040C70E /* CTTopicView.m */; };
+		CE955E1C1C72C6A40040C70E /* CTTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE955E1A1C72C6A40040C70E /* CTTopicView.m */; };
+		CE955E1D1C72C6A40040C70E /* CTTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE955E1A1C72C6A40040C70E /* CTTopicView.m */; };
+		CE955E201C72D3F40040C70E /* CTTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE955E1F1C72D3F40040C70E /* CTTagView.m */; };
+		CE955E211C72D3F40040C70E /* CTTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE955E1F1C72D3F40040C70E /* CTTagView.m */; };
+		CE955E221C72D3F40040C70E /* CTTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE955E1F1C72D3F40040C70E /* CTTagView.m */; };
 		CED78F431C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CED78F421C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m */; };
 		CED78F441C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CED78F421C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m */; };
 		CED78F451C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CED78F421C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m */; };
@@ -231,6 +243,14 @@
 		CE5C1B701C4CDB920093D0C8 /* CTCollectionViewStarExpertsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCollectionViewStarExpertsController.m; sourceTree = "<group>"; };
 		CE5FEEC71C699FFB0046045F /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = AFNetworking.framework; path = "/Users/lingguang1997/Library/Developer/Xcode/DerivedData/Citrons-eeyruqshyzvscrgayhmhclnkwzsg/Build/Products/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<absolute>"; };
 		CE6CAFC21C6CE96D0068BBC1 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Submodules/AFNetworking/build/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
+		CE6CAFF91C7232E70068BBC1 /* CTExpertDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTExpertDetailViewController.h; sourceTree = "<group>"; };
+		CE6CAFFA1C7232E70068BBC1 /* CTExpertDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTExpertDetailViewController.m; sourceTree = "<group>"; };
+		CE6CAFFE1C725C4C0068BBC1 /* CTExpertSummaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTExpertSummaryView.h; sourceTree = "<group>"; };
+		CE6CAFFF1C725C4C0068BBC1 /* CTExpertSummaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTExpertSummaryView.m; sourceTree = "<group>"; };
+		CE955E191C72C6A40040C70E /* CTTopicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTopicView.h; sourceTree = "<group>"; };
+		CE955E1A1C72C6A40040C70E /* CTTopicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTopicView.m; sourceTree = "<group>"; };
+		CE955E1E1C72D3F40040C70E /* CTTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTagView.h; sourceTree = "<group>"; };
+		CE955E1F1C72D3F40040C70E /* CTTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTagView.m; sourceTree = "<group>"; };
 		CED78F411C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRecommendedExpertCellAdapter.h; sourceTree = "<group>"; };
 		CED78F421C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTRecommendedExpertCellAdapter.m; sourceTree = "<group>"; };
 		CED78F461C4EA0F300967CE7 /* CTRecommendedExpertCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRecommendedExpertCell.h; sourceTree = "<group>"; };
@@ -324,6 +344,7 @@
 		CE46E8F11C423D820075CA29 /* Citron */ = {
 			isa = PBXGroup;
 			children = (
+				CE6CAFF81C7232310068BBC1 /* Expert */,
 				CEF1F58F1C50BB920062B243 /* Login */,
 				CE57D4E41C43E9A400DB72C4 /* Adapters */,
 				CE57D4B01C43A86100DB72C4 /* Cells */,
@@ -478,6 +499,21 @@
 				CE57D4EC1C43ECE800DB72C4 /* CTHomeStream.m */,
 			);
 			path = Streams;
+			sourceTree = "<group>";
+		};
+		CE6CAFF81C7232310068BBC1 /* Expert */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CAFF91C7232E70068BBC1 /* CTExpertDetailViewController.h */,
+				CE6CAFFA1C7232E70068BBC1 /* CTExpertDetailViewController.m */,
+				CE6CAFFE1C725C4C0068BBC1 /* CTExpertSummaryView.h */,
+				CE6CAFFF1C725C4C0068BBC1 /* CTExpertSummaryView.m */,
+				CE955E191C72C6A40040C70E /* CTTopicView.h */,
+				CE955E1A1C72C6A40040C70E /* CTTopicView.m */,
+				CE955E1E1C72D3F40040C70E /* CTTagView.h */,
+				CE955E1F1C72D3F40040C70E /* CTTagView.m */,
+			);
+			path = Expert;
 			sourceTree = "<group>";
 		};
 		CEF1F58F1C50BB920062B243 /* Login */ = {
@@ -649,17 +685,20 @@
 				CE57D49D1C43916E00DB72C4 /* CTHomeViewController.m in Sources */,
 				CEF1F5B71C544C730062B243 /* CTWXHTTPSessionManager.m in Sources */,
 				CE46E8FA1C423D820075CA29 /* CTMainViewController.m in Sources */,
+				CE955E1B1C72C6A40040C70E /* CTTopicView.m in Sources */,
 				CE00E0E11C487B0800E7474D /* CTStarExpertSectionController.m in Sources */,
 				CED78F481C4EA0F300967CE7 /* CTRecommendedExpertCell.m in Sources */,
 				CE57D4ED1C43ECE800DB72C4 /* CTHomeStream.m in Sources */,
 				CE00E0FF1C48846F00E7474D /* CTRecommendedExpertModule.m in Sources */,
 				CE46E8F71C423D820075CA29 /* AppDelegate.m in Sources */,
 				CE5C1B711C4CDB920093D0C8 /* CTCollectionViewStarExpertsController.m in Sources */,
+				CE955E201C72D3F40040C70E /* CTTagView.m in Sources */,
 				CEF1F5BC1C55CAFE0062B243 /* CTHTTPSessionManager.m in Sources */,
 				CE00E0E61C48810400E7474D /* CTCategorySectionController.m in Sources */,
 				CE00E0FA1C48844500E7474D /* CTRecommendedExpertSectionController.m in Sources */,
 				CE57D5011C440C1600DB72C4 /* CTHeaderCellAdapter.m in Sources */,
 				CE57D4BE1C43B8C300DB72C4 /* CTExpert.m in Sources */,
+				CE6CAFFB1C7232E70068BBC1 /* CTExpertDetailViewController.m in Sources */,
 				CE57D4E71C43EA0100DB72C4 /* CTStarExpertsCellAdapter.m in Sources */,
 				CE57D4E11C43E3C300DB72C4 /* UIImage+CTImage.m in Sources */,
 				CE00E1091C48FB4B00E7474D /* CTCategoryCell.m in Sources */,
@@ -670,6 +709,7 @@
 				CEF1F5CC1C5A6EC40062B243 /* CTOnboardingViewController.m in Sources */,
 				CE00E0F51C48838900E7474D /* CTInstructionModule.m in Sources */,
 				CE57D4D71C43D91600DB72C4 /* CTStartExpertCell.m in Sources */,
+				CE6CB0001C725C4C0068BBC1 /* CTExpertSummaryView.m in Sources */,
 				CE57D4AD1C43947E00DB72C4 /* UIColor+CTColor.m in Sources */,
 				CE00E1041C489D1800E7474D /* CTCategoryCellAdapter.m in Sources */,
 				CE57D4DC1C43E23900DB72C4 /* UIFont+CTFont.m in Sources */,
@@ -697,10 +737,12 @@
 				CE57D4BF1C43B8C300DB72C4 /* CTExpert.m in Sources */,
 				CE57D5021C440C1600DB72C4 /* CTHeaderCellAdapter.m in Sources */,
 				CE57D4C91C43C63500DB72C4 /* CTUser.m in Sources */,
+				CE955E1C1C72C6A40040C70E /* CTTopicView.m in Sources */,
 				CE00E1001C48846F00E7474D /* CTRecommendedExpertModule.m in Sources */,
 				CE00E0FB1C48844500E7474D /* CTRecommendedExpertSectionController.m in Sources */,
 				CE00E0F11C48834A00E7474D /* CTInstructionSectionController.m in Sources */,
 				CE57D4AE1C43947E00DB72C4 /* UIColor+CTColor.m in Sources */,
+				CE955E211C72D3F40040C70E /* CTTagView.m in Sources */,
 				CEF1F5BD1C55CAFE0062B243 /* CTHTTPSessionManager.m in Sources */,
 				CED78F441C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m in Sources */,
 				CEF1F5CD1C5A6EC40062B243 /* CTOnboardingViewController.m in Sources */,
@@ -714,10 +756,12 @@
 				CE57D4F81C43FB7500DB72C4 /* CTInstructionCell.m in Sources */,
 				CE57D4DD1C43E23900DB72C4 /* UIFont+CTFont.m in Sources */,
 				CE57D4B41C43A8A700DB72C4 /* CTStarExpertsCell.m in Sources */,
+				CE6CAFFC1C7232E70068BBC1 /* CTExpertDetailViewController.m in Sources */,
 				CE46E90D1C423D830075CA29 /* CitronTests.m in Sources */,
 				CE00E0E71C48810400E7474D /* CTCategorySectionController.m in Sources */,
 				CE57D4BA1C43AA6000DB72C4 /* CTStarExpertsModule.m in Sources */,
 				CE57D4E81C43EA0100DB72C4 /* CTStarExpertsCellAdapter.m in Sources */,
+				CE6CB0011C725C4C0068BBC1 /* CTExpertSummaryView.m in Sources */,
 				CE57D4F31C43FA2C00DB72C4 /* CTInstructionCellAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -739,10 +783,12 @@
 				CE57D4C01C43B8C300DB72C4 /* CTExpert.m in Sources */,
 				CE57D5031C440C1600DB72C4 /* CTHeaderCellAdapter.m in Sources */,
 				CE57D4CA1C43C63500DB72C4 /* CTUser.m in Sources */,
+				CE955E1D1C72C6A40040C70E /* CTTopicView.m in Sources */,
 				CE00E1011C48846F00E7474D /* CTRecommendedExpertModule.m in Sources */,
 				CE00E0FC1C48844500E7474D /* CTRecommendedExpertSectionController.m in Sources */,
 				CE00E0F21C48834A00E7474D /* CTInstructionSectionController.m in Sources */,
 				CE57D4AF1C43947E00DB72C4 /* UIColor+CTColor.m in Sources */,
+				CE955E221C72D3F40040C70E /* CTTagView.m in Sources */,
 				CEF1F5BE1C55CAFE0062B243 /* CTHTTPSessionManager.m in Sources */,
 				CED78F451C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m in Sources */,
 				CEF1F5CE1C5A6EC40062B243 /* CTOnboardingViewController.m in Sources */,
@@ -756,10 +802,12 @@
 				CE57D4F91C43FB7500DB72C4 /* CTInstructionCell.m in Sources */,
 				CE57D4DE1C43E23900DB72C4 /* UIFont+CTFont.m in Sources */,
 				CE57D4B51C43A8A700DB72C4 /* CTStarExpertsCell.m in Sources */,
+				CE6CAFFD1C7232E70068BBC1 /* CTExpertDetailViewController.m in Sources */,
 				CE46E9181C423D830075CA29 /* CitronUITests.m in Sources */,
 				CE00E0E81C48810400E7474D /* CTCategorySectionController.m in Sources */,
 				CE57D4BB1C43AA6000DB72C4 /* CTStarExpertsModule.m in Sources */,
 				CE57D4E91C43EA0100DB72C4 /* CTStarExpertsCellAdapter.m in Sources */,
+				CE6CB0021C725C4C0068BBC1 /* CTExpertSummaryView.m in Sources */,
 				CE57D4F41C43FA2C00DB72C4 /* CTInstructionCellAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
