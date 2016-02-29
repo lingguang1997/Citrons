@@ -53,10 +53,6 @@ static CGFloat const kHPadding = 15;
     _scrollView.frame = self.view.bounds;
     _scrollContentView.frame = CGRectMake(0, 0, canvasWidth, CGRectGetMaxY(_topicsView.frame));
     _scrollView.contentSize = _scrollView.frame.size;
-
-//    NSLog(@"%@", NSStringFromCGRect(self.scrollView.frame));
-//    NSLog(@"%@", NSStringFromCGRect(self.scrollContentView.frame));
-
 }
 
 - (void)viewDidLayoutSubviews {
@@ -70,33 +66,6 @@ static CGFloat const kHPadding = 15;
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 }
-
-//- (void)updateViewConstraints {
-//    [super updateViewConstraints];
-//
-//    // we cannot use the frame of each view as the cavasWidth, because it may change and causes animation problem.
-//    CGFloat canvasWidth = CGRectGetWidth(self.view.bounds);
-//
-//    if (_summaryViewHeightConstraint) {
-//        [_summaryView removeConstraints:_summaryViewHeightConstraint];
-//    }
-//    _summaryViewHeightConstraint = [_summaryView ct_setHeight:[CTExpertSummaryView heightWithItem:_expert canvasWidth:canvasWidth]];
-//
-//    if (_summaryViewSeperatorLeadingConstraint) {
-//        [_summaryViewSeperator.superview removeConstraints:_summaryViewSeperatorLeadingConstraint];
-//    }
-//    if (_summaryViewSeperatorTrainlingConstraint) {
-//        [_summaryViewSeperator.superview removeConstraints:_summaryViewSeperatorTrainlingConstraint];
-//    }
-//    _summaryViewSeperatorLeadingConstraint = [_summaryViewSeperator ct_setLeadingSpaceToSuperview:kHPadding];
-//    _summaryViewSeperatorTrainlingConstraint = [_summaryViewSeperator ct_setTrailingSpaceToSuperview:kHPadding];
-//
-////    if (_topicsViewHeightConstraint) {
-////        [_topicsView removeConstraints:_topicsViewHeightConstraint];
-////    }
-////    [_topicsView ct_setHeight:[CTTopicsView heightWithItem:_expert canvasWidth:canvasWidth]];
-//    [_topicsView setNeedsUpdateConstraints];
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
