@@ -12,6 +12,7 @@
 
 @property (nonatomic, nonnull) UILabel *label;
 
++ (CGFloat)widthWithText:(nonnull NSString *)text height:(CGFloat)height;
 - (nonnull instancetype)initWithTag:(nonnull NSString *)tag;
 
 @end

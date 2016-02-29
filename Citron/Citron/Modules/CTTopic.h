@@ -11,7 +11,7 @@
 @interface CTTopic : NSObject
 
 @property (nonatomic, copy, readonly, nonnull) NSString *title;
-@property (nonatomic, readonly) NSInteger price;
+@property (nonatomic, readonly) NSUInteger price;
 @property (nonatomic, readonly) NSInteger salePrice;
 @property (nonatomic, copy, readonly, nonnull) NSString *detail;
 @property (nonatomic, readonly) CGFloat duration;

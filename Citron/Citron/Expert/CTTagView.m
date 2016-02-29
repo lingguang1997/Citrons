@@ -11,6 +11,8 @@
 #import "UIColor+CTColor.h"
 #import "UIFont+CTFont.h"
 
+#define kTagFont [UIFont ct_appFontWithSize:10]
+
 static CGFloat const kHPadding = 5;
 
 @implementation CTTagView
@@ -27,7 +29,7 @@ static CGFloat const kHPadding = 5;
     self = [super initWithFrame:frame];
     if (self) {
         _label = [[UILabel alloc] initWithFrame:frame];
-        _label.font = [UIFont ct_appFontWithSize:10];
+        _label.font = kTagFont;
         _label.textAlignment = NSTextAlignmentCenter;
         _label.textColor = [UIColor ct_grayColor];
         _label.lineBreakMode = NSLineBreakByClipping;
@@ -42,17 +44,17 @@ static CGFloat const kHPadding = 5;
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    CGFloat width = [_label.text ak_WidthWithFont:_label.font fixedHeight:CGRectGetHeight(self.frame)];
-    _label.frame = CGRectMake(kHPadding, 0, width, CGRectGetHeight(self.frame));
+    CGFloat height = CGRectGetHeight(self.frame);
+    CGFloat width = [[self class] widthWithText:_label.text height:height];
+    _label.frame = CGRectMake(0, 0, width, height);
 }
 
 - (CGSize)sizeThatFits:(CGSize)size {
-    CGRect frame = self.frame;
-    frame.size = size;
-    self.frame = frame;
-    [self setNeedsLayout];
-    [self layoutIfNeeded];
-    return CGSizeMake(kHPadding + kHPadding + CGRectGetWidth(_label.frame), size.height);
+    return CGSizeMake([[self class] widthWithText:_label.text height:size.height], size.height);
+}
+
++ (CGFloat)widthWithText:(NSString *)text height:(CGFloat)height {
+    return [text ak_WidthWithFont:kTagFont fixedHeight:height] + kHPadding + kHPadding;
 }
 
 @end

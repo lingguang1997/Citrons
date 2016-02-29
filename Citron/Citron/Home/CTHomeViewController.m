@@ -36,6 +36,11 @@
     [super viewDidLoad];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tabBarController.tabBar setHidden:NO];
+}
+
 # pragma mark - AKStream
 
 - (CTHomeStream *)stream {
