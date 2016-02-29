@@ -82,6 +82,7 @@ static CGFloat const kDurationLabelHeight = 20;
     _priceView.price = topic.price;
     [_priceView sizeToFit];
     _durationLabel.text = [NSString stringWithFormat:@"约%.1f小时", topic.duration];
+    [self setNeedsLayout];
 }
 
 + (CGFloat)heightWithItem:(CTTopic *)topic canvasWidth:(CGFloat)canvasWidth {

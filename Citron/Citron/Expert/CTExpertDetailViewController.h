@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class CTExpert;
+@class CTExpertBioView;
 @class CTExpertSummaryView;
 @class CTTopicsView;
 
@@ -19,6 +20,8 @@
 @property (nonatomic, nonnull) IBOutlet CTExpertSummaryView *summaryView;
 @property (nonatomic, nonnull) IBOutlet UIView *summaryViewSeperator;
 @property (nonatomic, nonnull) IBOutlet CTTopicsView *topicsView;
+@property (nonatomic, nonnull) IBOutlet UIView *topicsViewSeperator;
+@property (nonatomic, nonnull) IBOutlet CTExpertBioView *bioView;
 
 - (nonnull instancetype)initWithExpert:(nonnull CTExpert *)expert;
 

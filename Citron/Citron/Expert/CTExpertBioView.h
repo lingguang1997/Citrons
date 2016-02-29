@@ -6,8 +6,12 @@
 //  Copyright © 2016 iAskData. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CTSectionView.h"
 
-@interface CTExpertBioView : UILabel
+@class CTExpert;
+
+@interface CTExpertBioView : CTSectionView
+
+- (void)updateWithExpert:(nonnull CTExpert *)expert;
 
 @end

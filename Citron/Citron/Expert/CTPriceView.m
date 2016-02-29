@@ -35,7 +35,6 @@ static CGFloat const kHeight = 30;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-//        self = [[self class] ct_loadFromNib];
         [self _commonInit];
     }
     return self;

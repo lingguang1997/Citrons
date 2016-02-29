@@ -6,7 +6,6 @@
 //  Copyright © 2016 iAskData. All rights reserved.
 //
 
-#import <objc/runtime.h>
 #import "CTExpert.h"
 #import "CTTopicView.h"
 #import "CTTopicsView.h"
@@ -42,6 +41,7 @@ static CGFloat const kVPaddingBtw = 5;
         [_topicViews addObject:topicView];
         [self addSubview:topicView];
     }];
+    [self setNeedsLayout];
 }
 
 - (void)layoutSubviews {
@@ -59,16 +59,20 @@ static CGFloat const kVPaddingBtw = 5;
     }];
 }
 
+# pragma mark - AKDynamicHeightView
+
 + (CGFloat)heightWithItem:(CTExpert *)expert canvasWidth:(CGFloat)canvasWidth {
-    __block CGFloat height = [super heightWithItem:expert canvasWidth:canvasWidth];
     if (expert.topics.count) {
+        __block CGFloat height = [super heightWithItem:expert canvasWidth:canvasWidth];
         height += kTitleLabelBottomPadding;
         [expert.topics enumerateObjectsUsingBlock:^(CTTopic * _Nonnull topic, NSUInteger idx, BOOL * _Nonnull stop) {
             height += [CTTopicView heightWithItem:topic canvasWidth:canvasWidth];
         }];
         height += (kVPaddingBtw * (expert.topics.count));
+        height += 8;
+        return height;
     }
-    return height;
+    return 0;
 }
 
 @end

@@ -45,6 +45,8 @@ static CGFloat const kHeight = 20;
     [self addSubview:_titleLabel];
 }
 
+# pragma mark - AKDynamicHeightView
+
 + (CGFloat)heightWithItem:(id)item canvasWidth:(CGFloat)canvasWidth {
     return kVPadding + kHPadding;
 }

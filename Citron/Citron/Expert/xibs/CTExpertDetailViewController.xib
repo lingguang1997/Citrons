@@ -6,11 +6,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CTExpertDetailViewController">
             <connections>
+                <outlet property="bioView" destination="YuN-4m-EDH" id="UTi-YY-zhA"/>
                 <outlet property="scrollContentView" destination="kc5-fB-imx" id="7rw-xk-Wpf"/>
                 <outlet property="scrollView" destination="O3T-6L-eRH" id="pNK-46-PKt"/>
                 <outlet property="summaryView" destination="V77-ps-L3M" id="lYl-F8-LOe"/>
                 <outlet property="summaryViewSeperator" destination="vJu-OA-1iw" id="OfL-As-Aht"/>
                 <outlet property="topicsView" destination="cFx-CV-vNX" id="mRw-wJ-IzR"/>
+                <outlet property="topicsViewSeperator" destination="O0P-lY-bUn" id="Ipr-uS-2JR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -41,6 +43,16 @@
                                     <rect key="frame" x="0.0" y="168" width="320" height="128"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="1" green="0.2275027043" blue="0.37156794399999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="O0P-lY-bUn">
+                                    <rect key="frame" x="15" y="297" width="290" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="YuN-4m-EDH" customClass="CTExpertBioView">
+                                    <rect key="frame" x="0.0" y="304" width="320" height="119"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.51129479239999998" green="1" blue="0.2110340701" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" red="0.96008475230000001" green="0.32596607979999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>

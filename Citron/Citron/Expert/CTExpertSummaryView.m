@@ -225,6 +225,7 @@ static CGFloat const kVPaddingBtwTagLines = 2;
         [_tagLabels addObject:tagView];
         [self addSubview:tagView];
     }];
+    [self setNeedsLayout];
 }
 
 @end

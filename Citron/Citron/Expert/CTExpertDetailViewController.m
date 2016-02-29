@@ -7,6 +7,7 @@
 //
 
 #import "CTExpert.h"
+#import "CTExpertBioView.h"
 #import "CTExpertDetailViewController.h"
 #import "CTExpertSummaryView.h"
 #import "CTTopicsView.h"
@@ -40,6 +41,7 @@ static CGFloat const kHPadding = 15;
     [super viewDidLoad];
     [_summaryView updateWithExpert:_expert];
     [_topicsView updateWithExpert:_expert];
+    [_bioView updateWithExpert:_expert];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -50,8 +52,9 @@ static CGFloat const kHPadding = 15;
     _summaryViewSeperator.frame = CGRectMake(kHPadding, CGRectGetMaxY(_summaryView.frame), canvasWidth - kHPadding - kHPadding, 1);
 
     _topicsView.frame = CGRectMake(0, CGRectGetMaxY(_summaryViewSeperator.frame), canvasWidth, [CTTopicsView heightWithItem:_expert canvasWidth:canvasWidth]);
+    _bioView.frame = CGRectMake(0, CGRectGetMaxY(_topicsView.frame), canvasWidth, [CTExpertBioView heightWithItem:_expert canvasWidth:canvasWidth]);
     _scrollView.frame = self.view.bounds;
-    _scrollContentView.frame = CGRectMake(0, 0, canvasWidth, CGRectGetMaxY(_topicsView.frame));
+    _scrollContentView.frame = CGRectMake(0, 0, canvasWidth, CGRectGetMaxY(_bioView.frame));
     _scrollView.contentSize = _scrollView.frame.size;
 }
 
