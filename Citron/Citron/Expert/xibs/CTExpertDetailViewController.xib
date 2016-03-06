@@ -6,7 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CTExpertDetailViewController">
             <connections>
+                <outlet property="bioSeperator" destination="qZe-hq-7QR" id="Vk8-xB-k5N"/>
                 <outlet property="bioView" destination="YuN-4m-EDH" id="UTi-YY-zhA"/>
+                <outlet property="linksView" destination="NcY-RJ-WF7" id="qcM-Yk-4Qa"/>
                 <outlet property="scrollContentView" destination="kc5-fB-imx" id="7rw-xk-Wpf"/>
                 <outlet property="scrollView" destination="O3T-6L-eRH" id="pNK-46-PKt"/>
                 <outlet property="summaryView" destination="V77-ps-L3M" id="lYl-F8-LOe"/>
@@ -53,6 +55,16 @@
                                     <rect key="frame" x="0.0" y="304" width="320" height="119"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.51129479239999998" green="1" blue="0.2110340701" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="qZe-hq-7QR">
+                                    <rect key="frame" x="0.0" y="424" width="320" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" id="NcY-RJ-WF7" customClass="CTExpertLinksView">
+                                    <rect key="frame" x="0.0" y="424" width="320" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.29245920219999999" green="0.59725290340000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" red="0.96008475230000001" green="0.32596607979999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>

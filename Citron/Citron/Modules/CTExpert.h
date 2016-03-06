@@ -9,6 +9,7 @@
 #import "CTUser.h"
 
 @class CTComment;
+@class CTLink;
 @class CTTopic;
 
 @interface CTExpert : CTUser
@@ -21,7 +22,7 @@
 @property (nonatomic, copy, readonly, nonnull) NSArray<NSString *> *tags;
 @property (nonatomic, copy, readonly, nonnull) NSArray<CTTopic *> *topics;
 @property (nonatomic, copy, readonly, nonnull) NSString *bio;
-@property (nonatomic, copy, readonly, nonnull) NSArray<NSString *> *links;
+@property (nonatomic, copy, readonly, nonnull) NSArray<CTLink *> *links;
 @property (nonatomic, readonly) NSInteger credits;
 @property (nonatomic, copy, readonly, nonnull) NSArray<CTComment *> *commentsFromExperts;
 @property (nonatomic, copy, readonly, nonnull) NSArray<CTComment *> *commentsFromUsers;

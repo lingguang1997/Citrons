@@ -6,11 +6,14 @@
 //  Copyright © 2016 iAskData. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <AppKit/AKDynamicHeightView.h>
+#import "CTSectionView.h"
 
 @class CTLink;
 
-@interface CTExpertLinksView : UIView
+@interface CTExpertLinksView : CTSectionView <AKDynamicHeightView>
+
+@property (nonatomic, nonnull) UIView *borderView;
 
 @property (nonatomic, nonnull) NSArray<CTLink *> *links;
 

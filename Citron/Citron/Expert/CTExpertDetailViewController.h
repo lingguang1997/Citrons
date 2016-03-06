@@ -10,6 +10,7 @@
 
 @class CTExpert;
 @class CTExpertBioView;
+@class CTExpertLinksView;
 @class CTExpertSummaryView;
 @class CTTopicsView;
 
@@ -22,6 +23,8 @@
 @property (nonatomic, nonnull) IBOutlet CTTopicsView *topicsView;
 @property (nonatomic, nonnull) IBOutlet UIView *topicsViewSeperator;
 @property (nonatomic, nonnull) IBOutlet CTExpertBioView *bioView;
+@property (nonatomic, nonnull) IBOutlet UIView *bioSeperator;
+@property (nonatomic, nonnull) IBOutlet CTExpertLinksView *linksView;
 
 - (nonnull instancetype)initWithExpert:(nonnull CTExpert *)expert;
 

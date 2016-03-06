@@ -7,6 +7,7 @@
 //
 
 #import "CTExpert.h"
+#import "CTLink.h"
 
 @implementation CTExpert
 
@@ -17,7 +18,7 @@
     return self;
 }
 
-- (instancetype)initWithID:(NSString *)ID name:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber title:(NSString *)title schoole:(NSString *)school degree:(NSString *)degree tags:(NSArray<NSString *> *)tags topics:(NSArray<CTTopic *> *)topics bio:(NSString *)bio links:(NSArray<NSString *> *)links credits:(NSInteger)credits commentsFromExperts:(NSArray<CTComment *> *)commentFromExperts commentsFromUsers:(NSArray<CTComment *> *)commentsFromUsers profileImageURL:(NSString *)profileImageURL {
+- (instancetype)initWithID:(NSString *)ID name:(NSString *)name email:(NSString *)email phoneNumber:(NSString *)phoneNumber title:(NSString *)title schoole:(NSString *)school degree:(NSString *)degree tags:(NSArray<NSString *> *)tags topics:(NSArray<CTTopic *> *)topics bio:(NSString *)bio links:(NSArray<CTLink *> *)links credits:(NSInteger)credits commentsFromExperts:(NSArray<CTComment *> *)commentFromExperts commentsFromUsers:(NSArray<CTComment *> *)commentsFromUsers profileImageURL:(NSString *)profileImageURL {
     self = [super initWithID:ID name:name email:email phoneNumber:phoneNumber];
     if (self) {
         _title = title;

@@ -9,6 +9,7 @@
 #import "CTExpert.h"
 #import "CTExpertBioView.h"
 #import "CTExpertDetailViewController.h"
+#import "CTExpertLinksView.h"
 #import "CTExpertSummaryView.h"
 #import "CTTopicsView.h"
 #import "UIView+InterfaceBuilder.h"
@@ -39,23 +40,28 @@ static CGFloat const kHPadding = 15;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tabBarController.tabBar.hidden = YES;
     [_summaryView updateWithExpert:_expert];
     [_topicsView updateWithExpert:_expert];
     [_bioView updateWithExpert:_expert];
+    _linksView.links = _expert.links;
 }
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     CGFloat canvasWidth = CGRectGetWidth(self.view.frame);
+    CGFloat seperatorWidth = canvasWidth - kHPadding - kHPadding;
     _summaryView.frame = CGRectMake(0, 0, canvasWidth, [CTExpertSummaryView heightWithItem:_expert canvasWidth:canvasWidth]);
 
-    _summaryViewSeperator.frame = CGRectMake(kHPadding, CGRectGetMaxY(_summaryView.frame), canvasWidth - kHPadding - kHPadding, 1);
+    _summaryViewSeperator.frame = CGRectMake(kHPadding, CGRectGetMaxY(_summaryView.frame), seperatorWidth, 1);
 
     _topicsView.frame = CGRectMake(0, CGRectGetMaxY(_summaryViewSeperator.frame), canvasWidth, [CTTopicsView heightWithItem:_expert canvasWidth:canvasWidth]);
     _bioView.frame = CGRectMake(0, CGRectGetMaxY(_topicsView.frame), canvasWidth, [CTExpertBioView heightWithItem:_expert canvasWidth:canvasWidth]);
+    _bioSeperator.frame = CGRectMake(kHPadding, CGRectGetMaxY(_bioView.frame), seperatorWidth, 1);
+    _linksView.frame = CGRectMake(0, CGRectGetMaxY(_bioSeperator.frame), canvasWidth, [CTExpertLinksView heightWithItem:_expert canvasWidth:canvasWidth]);
     _scrollView.frame = self.view.bounds;
-    _scrollContentView.frame = CGRectMake(0, 0, canvasWidth, CGRectGetMaxY(_bioView.frame));
-    _scrollView.contentSize = _scrollView.frame.size;
+    _scrollContentView.frame = CGRectMake(0, 0, canvasWidth, CGRectGetMaxY(_linksView.frame));
+    _scrollView.contentSize = _scrollContentView.frame.size;
 }
 
 - (void)viewDidLayoutSubviews {

@@ -13,7 +13,7 @@
 - (instancetype)initWithLinkText:(NSString *)linkText urlString:(NSString *)urlString {
     self = [super init];
     if (self) {
-        _linkeText = linkText;
+        _linkText = linkText;
         _urlString = urlString;
     }
     return self;

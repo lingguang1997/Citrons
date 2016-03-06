@@ -10,7 +10,7 @@
 
 @interface CTLink : NSObject
 
-@property (nonatomic, readonly, nonnull) NSString *linkeText;
+@property (nonatomic, readonly, nonnull) NSString *linkText;
 @property (nonatomic, readonly, nonnull) NSString *urlString;
 
 - (nonnull instancetype)initWithLinkText:(nonnull NSString *)linkText urlString:(nonnull NSString *)urlString;

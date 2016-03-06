@@ -67,7 +67,7 @@ static CGFloat const kHeight = 108;
     
     [super layoutSubviews];
     _profileImageView.frame = CGRectMake(kLeftPadding, kTopPadding, kProfileImageViewDimension, kProfileImageViewDimension);
-    
+
     CGFloat nameLabelWidth = [_nameLabel.text ak_WidthWithFont:_nameLabel.font fixedHeight:textHeight];
     _nameLabel.frame = CGRectMake(0, CGRectGetMaxY(_profileImageView.frame), nameLabelWidth, textHeight);
     _nameLabel.center = CGPointMake(_profileImageView.center.x, CGRectGetMaxY(_profileImageView.frame) + CGRectGetHeight(_nameLabel.frame) / 2);
