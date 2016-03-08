@@ -6,6 +6,7 @@
 //  Copyright © 2016 iAskData. All rights reserved.
 //
 
+#import "CTTopicDetailViewController.h"
 #import "CTExpert.h"
 #import "CTExpertBioView.h"
 #import "CTExpertDetailViewController.h"
@@ -15,6 +16,7 @@
 #import "UIView+InterfaceBuilder.h"
 
 static CGFloat const kHPadding = 15;
+static CGFloat const kContactButtonHeight = 40;
 
 @interface CTExpertDetailViewController ()
 
@@ -45,6 +47,8 @@ static CGFloat const kHPadding = 15;
     [_topicsView updateWithExpert:_expert];
     [_bioView updateWithExpert:_expert];
     _linksView.links = _expert.links;
+
+    [_contactButton addTarget:self action:@selector(_contactButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -59,9 +63,12 @@ static CGFloat const kHPadding = 15;
     _bioView.frame = CGRectMake(0, CGRectGetMaxY(_topicsView.frame), canvasWidth, [CTExpertBioView heightWithItem:_expert canvasWidth:canvasWidth]);
     _bioSeperator.frame = CGRectMake(kHPadding, CGRectGetMaxY(_bioView.frame), seperatorWidth, 1);
     _linksView.frame = CGRectMake(0, CGRectGetMaxY(_bioSeperator.frame), canvasWidth, [CTExpertLinksView heightWithItem:_expert canvasWidth:canvasWidth]);
-    _scrollView.frame = self.view.bounds;
+    CGRect scrollViewFrame = self.view.bounds;
+    scrollViewFrame.size.height -= kContactButtonHeight;
+    _scrollView.frame = scrollViewFrame;
     _scrollContentView.frame = CGRectMake(0, 0, canvasWidth, CGRectGetMaxY(_linksView.frame));
     _scrollView.contentSize = _scrollContentView.frame.size;
+    _contactButton.frame = CGRectMake(0, CGRectGetMaxY(_scrollView.frame), canvasWidth, kContactButtonHeight);
 }
 
 - (void)viewDidLayoutSubviews {
@@ -79,6 +86,29 @@ static CGFloat const kHPadding = 15;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)_contactButtonTapped:(UIButton *)button {
+    UIView *darkView = [[UIView alloc] initWithFrame:self.view.bounds];
+    darkView.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:darkView];
+    CGFloat nextButtonHeight = 40;
+    UIButton *nextButton = [UIButton ct_loadFromNibWithName:@"CTBlueButton"];
+    [nextButton setTitle:@"下一步" forState:UIControlStateNormal];
+    [nextButton addTarget:self action:@selector(_nextButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    nextButton.frame = CGRectMake(0, CGRectGetHeight(darkView.frame) - nextButtonHeight, CGRectGetWidth(darkView.frame), nextButtonHeight);
+    [darkView addSubview:nextButton];
+    [darkView addSubview:_topicsView];
+    [UIView animateWithDuration:.3 animations:^{
+        CGRect topicsViewFrame = _topicsView.frame;
+        topicsViewFrame.origin.y = 0;//(CGRectGetHeight(darkView.frame) - CGRectGetHeight(_topicsView.frame)) / 2;
+        _topicsView.frame = topicsViewFrame;
+    }];
+}
+
+- (void)_nextButtonTapped:(UIButton *)button {
+    CTTopicDetailViewController *controller = [CTTopicDetailViewController new];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end

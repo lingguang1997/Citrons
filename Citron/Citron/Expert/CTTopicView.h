@@ -19,8 +19,12 @@
 @property (nonatomic, nonnull) IBOutlet CTPriceView *priceView;
 @property (nonatomic, nonnull) IBOutlet UILabel *durationLabel;
 
+@property (nonatomic, getter=isSelected) BOOL selected;
+
 @property (nonatomic, readonly, nonnull) CTTopic *topic;
 
 - (void)updateWithTopic:(nonnull CTTopic *)topic;
+
+- (BOOL)toggleSelected;
 
 @end
