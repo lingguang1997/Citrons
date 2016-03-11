@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="bioSeperator" destination="qZe-hq-7QR" id="Vk8-xB-k5N"/>
                 <outlet property="bioView" destination="YuN-4m-EDH" id="UTi-YY-zhA"/>
+                <outlet property="contactButton" destination="bQ1-9d-vzp" id="BHg-oM-wle"/>
                 <outlet property="linksView" destination="NcY-RJ-WF7" id="qcM-Yk-4Qa"/>
                 <outlet property="scrollContentView" destination="kc5-fB-imx" id="7rw-xk-Wpf"/>
                 <outlet property="scrollView" destination="O3T-6L-eRH" id="pNK-46-PKt"/>
@@ -24,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" id="O3T-6L-eRH" customClass="UIScrollView">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="kc5-fB-imx">
@@ -72,6 +73,15 @@
                     </subviews>
                     <color key="backgroundColor" red="0.46666666670000001" green="0.73333333329999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bQ1-9d-vzp">
+                    <rect key="frame" x="0.0" y="519" width="320" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.29245920219999999" green="0.59725290340000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                    <state key="normal" title="我要约专家">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="301" y="305"/>

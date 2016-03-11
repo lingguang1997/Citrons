@@ -26,7 +26,8 @@ static CGFloat const kVPaddingBtw = 5;
 - (void)commonInit {
     [super commonInit];
     self.titleLabel.text = @"专家话题";
-    self.backgroundColor = [UIColor brownColor];
+    UIGestureRecognizer *gr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectATopic:)];
+    [self addGestureRecognizer:gr];
 }
 
 - (void)updateWithExpert:(CTExpert *)expert {
@@ -57,6 +58,14 @@ static CGFloat const kVPaddingBtw = 5;
         topicView.frame = CGRectMake(kHPadding, originY, canvasWidth - kHPadding - kHPadding, [CTTopicView heightWithItem:topicView.topic canvasWidth:canvasWidth]);
         originY += CGRectGetHeight(topicView.frame);
     }];
+}
+
+- (void)selectATopic:(UITapGestureRecognizer *)tapRecognizer {
+    CGPoint touchPoint = [tapRecognizer locationInView: self];
+    [_topicViews enumerateObjectsUsingBlock:^(CTTopicView * _Nonnull topicView, NSUInteger idx, BOOL * _Nonnull stop) {
+        topicView.selected = CGRectContainsPoint(topicView.frame, touchPoint);
+    }];
+
 }
 
 # pragma mark - AKDynamicHeightView

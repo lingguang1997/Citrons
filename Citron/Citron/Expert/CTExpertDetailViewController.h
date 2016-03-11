@@ -25,6 +25,9 @@
 @property (nonatomic, nonnull) IBOutlet CTExpertBioView *bioView;
 @property (nonatomic, nonnull) IBOutlet UIView *bioSeperator;
 @property (nonatomic, nonnull) IBOutlet CTExpertLinksView *linksView;
+@property (nonatomic, nonnull) IBOutlet UIView *linksViewSeperator;
+
+@property (nonatomic, nonnull) IBOutlet UIButton *contactButton;
 
 - (nonnull instancetype)initWithExpert:(nonnull CTExpert *)expert;
 

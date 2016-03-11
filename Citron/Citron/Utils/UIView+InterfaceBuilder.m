@@ -12,7 +12,11 @@
 @implementation UIView (InterfaceBuilder)
 
 + (instancetype)ct_loadFromNib {
-    return [CTFileOwner viewFromNibNamed:NSStringFromClass(self)];
+    return [self ct_loadFromNibWithName:NSStringFromClass(self)];
+}
+
++ (instancetype)ct_loadFromNibWithName:(NSString *)nibName {
+    return [CTFileOwner viewFromNibNamed:nibName];
 }
 
 - (NSArray *)ct_setLeadingSpaceToSuperview:(CGFloat)leading {

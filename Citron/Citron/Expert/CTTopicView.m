@@ -43,9 +43,10 @@ static CGFloat const kDurationLabelHeight = 20;
 }
 
 - (void)_commonInit {
+    _selected = NO;
+    [self _setUnselectedBorderColor];
     self.layer.cornerRadius = 5;
     self.layer.borderWidth = 1;
-    self.layer.borderColor = [UIColor ct_grayColor].CGColor;
     self.clipsToBounds = YES;
 
     _detailLabel.font = [[self class] _detailLabelFont];
@@ -83,6 +84,25 @@ static CGFloat const kDurationLabelHeight = 20;
     [_priceView sizeToFit];
     _durationLabel.text = [NSString stringWithFormat:@"约%.1f小时", topic.duration];
     [self setNeedsLayout];
+}
+
+- (void)setSelected:(BOOL)selected {
+    if (_selected != selected) {
+        _selected = selected;
+        if (_selected) {
+            [self _setSelectedBorderColor];
+        } else {
+            [self _setUnselectedBorderColor];
+        }
+    }
+}
+
+- (void)_setSelectedBorderColor {
+    self.layer.borderColor = [UIColor yellowColor].CGColor;
+}
+
+- (void)_setUnselectedBorderColor {
+    self.layer.borderColor = [UIColor ct_grayColor].CGColor;
 }
 
 + (CGFloat)heightWithItem:(CTTopic *)topic canvasWidth:(CGFloat)canvasWidth {
