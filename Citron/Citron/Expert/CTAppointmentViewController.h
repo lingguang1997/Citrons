@@ -19,7 +19,9 @@
 @property (nonatomic, nonnull) IBOutlet UIImageView *durationImageView;
 @property (nonatomic, nonnull) IBOutlet UILabel *durationLabel;
 @property (nonatomic, nonnull) IBOutlet AKStepBar *stepBar;
-@property (nonatomic, nonnull) IBOutlet UITextView *textView;
+@property (nonatomic, nonnull) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, nonnull) IBOutlet UITextView *questionTextView;
+@property (nonatomic, nonnull) IBOutlet UITextView *selfIntroView;
 
 @property (nonatomic, nonnull) IBOutlet UIButton *nextButton;
 
