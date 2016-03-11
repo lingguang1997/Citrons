@@ -15,8 +15,15 @@
 #import "CTTopicsView.h"
 #import "UIView+InterfaceBuilder.h"
 
+static CGFloat const seperatorHeight = 1;
 static CGFloat const kHPadding = 15;
 static CGFloat const kContactButtonHeight = 40;
+static CGFloat const topicViewTopPadding = 10;
+static CGFloat const topicViewBottomPadding = 10;
+static CGFloat const bioViewTopPadding = 10;
+static CGFloat const bioViewBottomPadding = 10;
+static CGFloat const linksViewTopPadding = 10;
+static CGFloat const linksViewBottomPadding = 10;
 
 @interface CTExpertDetailViewController ()
 
@@ -55,14 +62,19 @@ static CGFloat const kContactButtonHeight = 40;
     [super viewWillLayoutSubviews];
     CGFloat canvasWidth = CGRectGetWidth(self.view.frame);
     CGFloat seperatorWidth = canvasWidth - kHPadding - kHPadding;
+
     _summaryView.frame = CGRectMake(0, 0, canvasWidth, [CTExpertSummaryView heightWithItem:_expert canvasWidth:canvasWidth]);
+    _summaryViewSeperator.frame = CGRectMake(kHPadding, CGRectGetMaxY(_summaryView.frame), seperatorWidth, seperatorHeight);
 
-    _summaryViewSeperator.frame = CGRectMake(kHPadding, CGRectGetMaxY(_summaryView.frame), seperatorWidth, 1);
+    _topicsView.frame = CGRectMake(0, CGRectGetMaxY(_summaryViewSeperator.frame) + topicViewTopPadding, canvasWidth, [CTTopicsView heightWithItem:_expert canvasWidth:canvasWidth]);
+    _topicsViewSeperator.frame = CGRectMake(kHPadding, CGRectGetMaxY(_topicsView.frame) + topicViewBottomPadding, seperatorWidth, seperatorHeight);
 
-    _topicsView.frame = CGRectMake(0, CGRectGetMaxY(_summaryViewSeperator.frame), canvasWidth, [CTTopicsView heightWithItem:_expert canvasWidth:canvasWidth]);
-    _bioView.frame = CGRectMake(0, CGRectGetMaxY(_topicsView.frame), canvasWidth, [CTExpertBioView heightWithItem:_expert canvasWidth:canvasWidth]);
-    _bioSeperator.frame = CGRectMake(kHPadding, CGRectGetMaxY(_bioView.frame), seperatorWidth, 1);
-    _linksView.frame = CGRectMake(0, CGRectGetMaxY(_bioSeperator.frame), canvasWidth, [CTExpertLinksView heightWithItem:_expert canvasWidth:canvasWidth]);
+    _bioView.frame = CGRectMake(0, CGRectGetMaxY(_topicsViewSeperator.frame) + bioViewTopPadding, canvasWidth, [CTExpertBioView heightWithItem:_expert canvasWidth:canvasWidth]);
+    _bioSeperator.frame = CGRectMake(kHPadding, CGRectGetMaxY(_bioView.frame) + bioViewBottomPadding, seperatorWidth, 1);
+
+    _linksView.frame = CGRectMake(0, CGRectGetMaxY(_bioSeperator.frame) + linksViewTopPadding, canvasWidth, [CTExpertLinksView heightWithItem:_expert canvasWidth:canvasWidth]);
+    _linksViewSeperator.frame = CGRectMake(kHPadding, CGRectGetMaxY(_linksView.frame) + linksViewBottomPadding, seperatorWidth, 1);
+    
     CGRect scrollViewFrame = self.view.bounds;
     scrollViewFrame.size.height -= kContactButtonHeight;
     _scrollView.frame = scrollViewFrame;

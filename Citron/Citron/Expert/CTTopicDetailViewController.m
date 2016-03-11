@@ -12,6 +12,13 @@
 #import "CTTopicDetailViewController.h"
 
 static CGFloat const kHPadding = 15;
+static CGFloat const titleLabelTopPadding = 20;
+static CGFloat const titleLabelHeight = 20;
+static CGFloat const descLabelTopPadding = 10;
+static CGFloat const descLabelBottomPadding = 10;
+static CGFloat const descLabelHeight = 400;
+static CGFloat const seperatorHeight = 1;
+static CGFloat const priceViewTopPadding = 10;
 static CGFloat const kDurationLabelHeight = 20;
 static CGFloat const kNextButtonHeight = 40;
 
@@ -35,12 +42,12 @@ static CGFloat const kNextButtonHeight = 40;
     [super viewDidLayoutSubviews];
     CGFloat canvasWidth = CGRectGetWidth(self.view.bounds);
     CGFloat width = canvasWidth - kHPadding - kHPadding;
-    _titleLabel.frame = CGRectMake(kHPadding, 20, width, 20);
-    _descLabel.frame = CGRectMake(kHPadding, CGRectGetMaxY(_titleLabel.frame) + 10, width, 400);
-    _seperatorView.frame = CGRectMake(kHPadding, CGRectGetMaxY(_descLabel.frame) + 10, width, 1);
+    _titleLabel.frame = CGRectMake(kHPadding, titleLabelTopPadding, width, titleLabelHeight);
+    _descLabel.frame = CGRectMake(kHPadding, CGRectGetMaxY(_titleLabel.frame) + descLabelTopPadding, width, descLabelHeight);
+    _seperatorView.frame = CGRectMake(kHPadding, CGRectGetMaxY(_descLabel.frame) + descLabelBottomPadding, width, seperatorHeight);
     [_priceView sizeToFit];
     CGRect priceViewFrame = _priceView.frame;
-    priceViewFrame.origin = CGPointMake(kHPadding, CGRectGetMaxY(_seperatorView.frame) + 10);
+    priceViewFrame.origin = CGPointMake(kHPadding, CGRectGetMaxY(_seperatorView.frame) + priceViewTopPadding);
     _priceView.frame = priceViewFrame;
     CGFloat durationLabelWidth = [_durationLabel.text ak_WidthWithFont:_durationLabel.font fixedHeight:kDurationLabelHeight];
     _durationLabel.frame = CGRectMake(canvasWidth - kHPadding - durationLabelWidth, CGRectGetMidY(_priceView.frame) - kDurationLabelHeight / 2, durationLabelWidth, kDurationLabelHeight);
