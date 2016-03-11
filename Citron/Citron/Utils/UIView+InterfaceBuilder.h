@@ -11,7 +11,7 @@
 @interface UIView (InterfaceBuilder)
 
 + (nonnull instancetype)ct_loadFromNib;
-+ (nonnull instancetype)ct_loadFromNibWithName:(NSString *)nibName;
++ (nonnull instancetype)ct_loadFromNibWithName:(nonnull NSString *)nibName;
 - (nonnull NSArray *)ct_setLeadingSpaceToSuperview:(CGFloat)leading;
 - (nonnull NSArray *)ct_setTrailingSpaceToSuperview:(CGFloat)trailing;
 - (nonnull NSArray *)ct_setTopSpaceToSuperview:(CGFloat)top;

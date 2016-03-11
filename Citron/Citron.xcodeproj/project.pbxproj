@@ -149,6 +149,12 @@
 		CEA46DE61C8045370092D842 /* CTPriceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA46DE41C8045370092D842 /* CTPriceView.xib */; };
 		CEA46DE71C8045370092D842 /* CTPriceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA46DE41C8045370092D842 /* CTPriceView.xib */; };
 		CEB4679E1C85FB6700F28395 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB4679D1C85FB6700F28395 /* AFNetworking.framework */; };
+		CEC08E861C923F8A007C0EFD /* CTAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC08E841C923F8A007C0EFD /* CTAppointmentViewController.m */; };
+		CEC08E871C923F8A007C0EFD /* CTAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC08E841C923F8A007C0EFD /* CTAppointmentViewController.m */; };
+		CEC08E881C923F8A007C0EFD /* CTAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC08E841C923F8A007C0EFD /* CTAppointmentViewController.m */; };
+		CEC08E8D1C923FB6007C0EFD /* CTAppointmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC08E8C1C923FB6007C0EFD /* CTAppointmentViewController.xib */; };
+		CEC08E8E1C923FB6007C0EFD /* CTAppointmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC08E8C1C923FB6007C0EFD /* CTAppointmentViewController.xib */; };
+		CEC08E8F1C923FB6007C0EFD /* CTAppointmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC08E8C1C923FB6007C0EFD /* CTAppointmentViewController.xib */; };
 		CED78F431C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CED78F421C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m */; };
 		CED78F441C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CED78F421C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m */; };
 		CED78F451C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CED78F421C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m */; };
@@ -313,6 +319,9 @@
 		CEA46DE01C7FCB760092D842 /* UIView+InterfaceBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+InterfaceBuilder.m"; sourceTree = "<group>"; };
 		CEA46DE41C8045370092D842 /* CTPriceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTPriceView.xib; sourceTree = "<group>"; };
 		CEB4679D1C85FB6700F28395 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Submodules/AFNetworking/build/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
+		CEC08E831C923F8A007C0EFD /* CTAppointmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAppointmentViewController.h; sourceTree = "<group>"; };
+		CEC08E841C923F8A007C0EFD /* CTAppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAppointmentViewController.m; sourceTree = "<group>"; };
+		CEC08E8C1C923FB6007C0EFD /* CTAppointmentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTAppointmentViewController.xib; sourceTree = "<group>"; };
 		CED78F411C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRecommendedExpertCellAdapter.h; sourceTree = "<group>"; };
 		CED78F421C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTRecommendedExpertCellAdapter.m; sourceTree = "<group>"; };
 		CED78F461C4EA0F300967CE7 /* CTRecommendedExpertCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRecommendedExpertCell.h; sourceTree = "<group>"; };
@@ -383,6 +392,7 @@
 		CE19C7AD1C7E888300842AAE /* xibs */ = {
 			isa = PBXGroup;
 			children = (
+				CEC08E8C1C923FB6007C0EFD /* CTAppointmentViewController.xib */,
 				CE02C46F1C8CF64D00ABD805 /* CTTopicDetailViewController.xib */,
 				CE131A0A1C82662400A4D78A /* CTExpertDetailViewController.xib */,
 				CE19C7BB1C7F58BC00842AAE /* CTTopicView.xib */,
@@ -611,6 +621,8 @@
 				CE1319FD1C815FC600A4D78A /* CTTopicsView.m */,
 				CE02C46A1C8CF63300ABD805 /* CTTopicDetailViewController.h */,
 				CE02C46B1C8CF63300ABD805 /* CTTopicDetailViewController.m */,
+				CEC08E831C923F8A007C0EFD /* CTAppointmentViewController.h */,
+				CEC08E841C923F8A007C0EFD /* CTAppointmentViewController.m */,
 			);
 			path = Expert;
 			sourceTree = "<group>";
@@ -758,6 +770,7 @@
 				CE1319FB1C815F7D00A4D78A /* CTTopicsView.xib in Resources */,
 				CEA46DE51C8045370092D842 /* CTPriceView.xib in Resources */,
 				CEE0A9651C87322200679351 /* CTLinkView.xib in Resources */,
+				CEC08E8D1C923FB6007C0EFD /* CTAppointmentViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,6 +779,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE131A0C1C82662400A4D78A /* CTExpertDetailViewController.xib in Resources */,
+				CEC08E8E1C923FB6007C0EFD /* CTAppointmentViewController.xib in Resources */,
 				CEA46DE61C8045370092D842 /* CTPriceView.xib in Resources */,
 				CE19C7BD1C7F58BC00842AAE /* CTTopicView.xib in Resources */,
 			);
@@ -776,6 +790,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE131A0D1C82662400A4D78A /* CTExpertDetailViewController.xib in Resources */,
+				CEC08E8F1C923FB6007C0EFD /* CTAppointmentViewController.xib in Resources */,
 				CEA46DE71C8045370092D842 /* CTPriceView.xib in Resources */,
 				CE19C7BE1C7F58BC00842AAE /* CTTopicView.xib in Resources */,
 			);
@@ -797,6 +812,7 @@
 				CE57D4D21C43D7A900DB72C4 /* CTStarExpertController.m in Sources */,
 				CE57D4F21C43FA2C00DB72C4 /* CTInstructionCellAdapter.m in Sources */,
 				CE57D4B31C43A8A700DB72C4 /* CTStarExpertsCell.m in Sources */,
+				CEC08E861C923F8A007C0EFD /* CTAppointmentViewController.m in Sources */,
 				CE57D4CD1C43C82F00DB72C4 /* CTTopic.m in Sources */,
 				CE00E0F01C48834A00E7474D /* CTInstructionSectionController.m in Sources */,
 				CE57D49D1C43916E00DB72C4 /* CTHomeViewController.m in Sources */,
@@ -892,6 +908,7 @@
 				CE57D4BA1C43AA6000DB72C4 /* CTStarExpertsModule.m in Sources */,
 				CE19C79D1C7CBCF800842AAE /* CTExpertBioView.m in Sources */,
 				CE57D4E81C43EA0100DB72C4 /* CTStarExpertsCellAdapter.m in Sources */,
+				CEC08E871C923F8A007C0EFD /* CTAppointmentViewController.m in Sources */,
 				CE6CB0011C725C4C0068BBC1 /* CTExpertSummaryView.m in Sources */,
 				CE57D4F31C43FA2C00DB72C4 /* CTInstructionCellAdapter.m in Sources */,
 			);
@@ -947,6 +964,7 @@
 				CE57D4BB1C43AA6000DB72C4 /* CTStarExpertsModule.m in Sources */,
 				CE19C79E1C7CBCF800842AAE /* CTExpertBioView.m in Sources */,
 				CE57D4E91C43EA0100DB72C4 /* CTStarExpertsCellAdapter.m in Sources */,
+				CEC08E881C923F8A007C0EFD /* CTAppointmentViewController.m in Sources */,
 				CE6CB0021C725C4C0068BBC1 /* CTExpertSummaryView.m in Sources */,
 				CE57D4F41C43FA2C00DB72C4 /* CTInstructionCellAdapter.m in Sources */,
 			);

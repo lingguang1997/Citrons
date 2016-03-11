@@ -25,6 +25,4 @@
 
 - (void)updateWithTopic:(nonnull CTTopic *)topic;
 
-- (BOOL)toggleSelected;
-
 @end

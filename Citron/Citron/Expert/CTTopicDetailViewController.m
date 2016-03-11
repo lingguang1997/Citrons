@@ -7,6 +7,7 @@
 //
 
 #import <AppKit/NSString+AKDrawing.h>
+#import "CTAppointmentViewController.h"
 #import "CTPriceView.h"
 #import "CTTopicDetailViewController.h"
 
@@ -27,6 +28,7 @@ static CGFloat const kNextButtonHeight = 40;
     _priceView.price = 300;
     _durationLabel.text = @"约1小时";
     [_nextButton setTitle:@"针对此问题约专家" forState:UIControlStateNormal];
+    [_nextButton addTarget:self action:@selector(_nextButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -50,14 +52,9 @@ static CGFloat const kNextButtonHeight = 40;
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)_nextButtonTapped:(UIButton *)button {
+    CTAppointmentViewController *controller = [CTAppointmentViewController new];
+    [self.navigationController pushViewController:controller animated:YES];
 }
-*/
 
 @end
