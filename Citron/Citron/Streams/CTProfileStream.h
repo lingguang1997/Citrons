@@ -6,7 +6,7 @@
 //  Copyright © 2016年 iAskData. All rights reserved.
 //
 
-#import "AKStream.h"
+#import <AppKit/AKStream.h>
 
 @interface CTProfileStream : AKStream
 

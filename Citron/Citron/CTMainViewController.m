@@ -8,6 +8,7 @@
 
 #import "UIColor+CTColor.h"
 #import "CTHomeViewController.h"
+#import "CTProfileViewController.h"
 #import "CTMainViewController.h"
 
 @interface CTMainViewController ()
@@ -26,8 +27,10 @@
     CTHomeViewController *homeViewController = [CTHomeViewController new];
     UINavigationController *homeNC = [[UINavigationController alloc] initWithRootViewController:homeViewController];
 
-    CTHomeViewController *h1 = [CTHomeViewController new];
-    tabBarContoller.viewControllers = @[homeNC, h1];
+    CTProfileViewController *profileViewController = [CTProfileViewController new];
+    UINavigationController *profileNC = [[UINavigationController alloc] initWithRootViewController:profileViewController];
+    
+    tabBarContoller.viewControllers = @[homeNC, profileNC];
 
     [self addChildViewController:tabBarContoller];
     [self.view addSubview:tabBarContoller.view];

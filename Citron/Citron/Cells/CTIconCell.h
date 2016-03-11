@@ -8,6 +8,10 @@
 
 #import <AppKit/AKTableViewCell.h>
 
+static NSString * const kCTIconCellTitleKey     = @"CTIconCellTitleKey";
+static NSString * const kCTIconCellIconKey      = @"CTIconCellIconKey";
+static NSString * const kCTIconCellDataKey      = @"CTIconCellDataKey";
+
 @interface CTIconCell : AKTableViewCell
 
 @end

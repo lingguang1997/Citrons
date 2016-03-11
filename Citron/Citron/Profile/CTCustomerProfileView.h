@@ -10,7 +10,7 @@
 
 @class CTCustomer;
 
-@interface CTCustomerProfileView : UIView
+@interface CTCustomerProfileView : UIView <AKDynamicHeightView>
 
 - (void)updateWithCustomer:(CTCustomer *)customer;
 

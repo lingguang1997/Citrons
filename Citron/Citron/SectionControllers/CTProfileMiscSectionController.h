@@ -6,7 +6,7 @@
 //  Copyright © 2016年 iAskData. All rights reserved.
 //
 
-#import "AKTableViewSectionController.h"
+#import <AppKit/AKTableViewSectionController.h>
 
 @interface CTProfileMiscSectionController : AKTableViewSectionController
 

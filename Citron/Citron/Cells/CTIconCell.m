@@ -7,6 +7,7 @@
 //
 
 #import "CTIconCell.h"
+#import "UIFont+CTFont.h"
 
 @interface CTIconCell ()
 
@@ -19,8 +20,22 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.contentView.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor whiteColor];
+        self.textLabel.font = [UIFont ct_appFontWithSize:15];
+        self.seperatorEnabled = YES;
     }
     return self;
+}
+
+- (void)updateWithItem:(NSDictionary *)item{
+    if ([item.allKeys containsObject: kCTIconCellTitleKey]){
+        NSString *title = item[kCTIconCellTitleKey];
+        self.textLabel.text = title;
+    }
+    if ([item.allKeys containsObject:kCTIconCellIconKey]){
+        NSString *iconImageName = item[kCTIconCellIconKey];
+        self.imageView.image = [UIImage imageNamed:iconImageName];
+    }
 }
 
 @end

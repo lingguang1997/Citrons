@@ -6,8 +6,11 @@
 //  Copyright © 2016年 iAskData. All rights reserved.
 //
 
-#import "AKTableViewCell.h"
+#import <AppKit/AKTableViewCell.h>
+#import "CTCustomerProfileView.h"
 
 @interface CTProfileCoverCell : AKTableViewCell
+
+@property (nonatomic, readonly, nonnull) CTCustomerProfileView *coverView;
 
 @end

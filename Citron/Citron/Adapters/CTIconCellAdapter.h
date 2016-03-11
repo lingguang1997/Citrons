@@ -6,7 +6,7 @@
 //  Copyright © 2016年 iAskData. All rights reserved.
 //
 
-#import "AKTableViewCellAdapter.h"
+#import <AppKit/AKTableViewCellAdapter.h>
 
 @interface CTIconCellAdapter : AKTableViewCellAdapter
 

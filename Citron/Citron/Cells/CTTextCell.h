@@ -6,7 +6,10 @@
 //  Copyright © 2016年 iAskData. All rights reserved.
 //
 
-#import "AKTableViewCell.h"
+#import <AppKit/AKTableViewCell.h>
+
+static NSString * const kCTTextCellTitleKey     = @"CTTextCellTitleKey";
+static NSString * const kCTTextCellSubTitleKey  = @"CTTextCellSubTitleKey";
 
 @interface CTTextCell : AKTableViewCell
 

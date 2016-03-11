@@ -6,7 +6,7 @@
 //  Copyright © 2016年 iAskData. All rights reserved.
 //
 
-#import "AKTableViewCell.h"
+#import <AppKit/AKTableViewCell.h>
 
 @interface CTProfileQuestionStatusCell : AKTableViewCell
 
