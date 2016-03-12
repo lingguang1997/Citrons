@@ -8,8 +8,10 @@
 
 #import <AppKit/NSString+AKDrawing.h>
 #import <AppKit/AKStepBar.h>
+#import "CTAlertView.h"
 #import "CTAppointmentViewController.h"
 #import "CTPriceView.h"
+#import "UIView+InterfaceBuilder.h"
 
 static CGFloat const kHPadding = 15;
 static CGFloat const kSeperatorTopPadding = 10;
@@ -89,7 +91,13 @@ static CGFloat const kTextViewBtwPadding = 5;
 
 - (void)_nextButtonTapped:(UIButton *)button {
     if (_stepBar.currentStep == _stepBar.steps - 1) {
-        // submite
+        CTAlertView *alertView = [CTAlertView ct_loadFromNib];
+        alertView.titleLabel.text = @"提交成功";
+        alertView.detailLabel.text = @"请耐心等待专家回复！";
+        alertView.backgroundColor = [UIColor purpleColor];
+        alertView.style = CTAlertViewStyleComfirm;
+        [alertView sizeToFit];
+        [alertView showOnView:self.view];
     } else {
         [_scrollView setContentOffset:CGPointMake(CGRectGetMinX(_selfIntroView.frame), 0) animated:YES];
         [self _scrollToNextStep];

@@ -93,6 +93,12 @@
 		CE46E9021C423D820075CA29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE46E9001C423D820075CA29 /* LaunchScreen.storyboard */; };
 		CE46E90D1C423D830075CA29 /* CitronTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE46E90C1C423D830075CA29 /* CitronTests.m */; };
 		CE46E9181C423D830075CA29 /* CitronUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE46E9171C423D830075CA29 /* CitronUITests.m */; };
+		CE53BAFA1C93586000263685 /* CTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE53BAF91C93586000263685 /* CTAlertView.m */; };
+		CE53BAFB1C93586000263685 /* CTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE53BAF91C93586000263685 /* CTAlertView.m */; };
+		CE53BAFC1C93586000263685 /* CTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE53BAF91C93586000263685 /* CTAlertView.m */; };
+		CE53BAFF1C935C9A00263685 /* CTAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE53BAFE1C935C9A00263685 /* CTAlertView.xib */; };
+		CE53BB001C935C9A00263685 /* CTAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE53BAFE1C935C9A00263685 /* CTAlertView.xib */; };
+		CE53BB011C935C9A00263685 /* CTAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE53BAFE1C935C9A00263685 /* CTAlertView.xib */; };
 		CE57D49D1C43916E00DB72C4 /* CTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D49C1C43916E00DB72C4 /* CTHomeViewController.m */; };
 		CE57D49E1C43916E00DB72C4 /* CTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D49C1C43916E00DB72C4 /* CTHomeViewController.m */; };
 		CE57D49F1C43916E00DB72C4 /* CTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D49C1C43916E00DB72C4 /* CTHomeViewController.m */; };
@@ -322,6 +328,9 @@
 		CE46E9131C423D830075CA29 /* CitronUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CitronUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46E9171C423D830075CA29 /* CitronUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CitronUITests.m; sourceTree = "<group>"; };
 		CE46E9191C423D830075CA29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE53BAF81C93586000263685 /* CTAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAlertView.h; sourceTree = "<group>"; };
+		CE53BAF91C93586000263685 /* CTAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAlertView.m; sourceTree = "<group>"; };
+		CE53BAFE1C935C9A00263685 /* CTAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTAlertView.xib; sourceTree = "<group>"; };
 		CE57D49B1C43916E00DB72C4 /* CTHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHomeViewController.h; sourceTree = "<group>"; };
 		CE57D49C1C43916E00DB72C4 /* CTHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHomeViewController.m; sourceTree = "<group>"; };
 		CE57D4A01C4391A300DB72C4 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Submodules/AFNetworking/build/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
@@ -501,6 +510,7 @@
 		CE46E8F11C423D820075CA29 /* Citron */ = {
 			isa = PBXGroup;
 			children = (
+				CE53BAF71C93584500263685 /* UIComponents */,
 				54579CAF1C8FD83400DAB0A4 /* Profile */,
 				CE6CAFF81C7232310068BBC1 /* Expert */,
 				CEF1F58F1C50BB920062B243 /* Login */,
@@ -547,6 +557,24 @@
 				CE46E9191C423D830075CA29 /* Info.plist */,
 			);
 			path = CitronUITests;
+			sourceTree = "<group>";
+		};
+		CE53BAF71C93584500263685 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				CE53BAFD1C935C8800263685 /* Xibs */,
+				CE53BAF81C93586000263685 /* CTAlertView.h */,
+				CE53BAF91C93586000263685 /* CTAlertView.m */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		CE53BAFD1C935C8800263685 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				CE53BAFE1C935C9A00263685 /* CTAlertView.xib */,
+			);
+			path = Xibs;
 			sourceTree = "<group>";
 		};
 		CE57D49A1C43915000DB72C4 /* Home */ = {
@@ -859,6 +887,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE53BAFF1C935C9A00263685 /* CTAlertView.xib in Resources */,
 				CE19C7BC1C7F58BC00842AAE /* CTTopicView.xib in Resources */,
 				CE46E9021C423D820075CA29 /* LaunchScreen.storyboard in Resources */,
 				CE46E8FF1C423D820075CA29 /* Assets.xcassets in Resources */,
@@ -877,6 +906,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE131A0C1C82662400A4D78A /* CTExpertDetailViewController.xib in Resources */,
+				CE53BB001C935C9A00263685 /* CTAlertView.xib in Resources */,
 				CEC08E8E1C923FB6007C0EFD /* CTAppointmentViewController.xib in Resources */,
 				CEA46DE61C8045370092D842 /* CTPriceView.xib in Resources */,
 				CE19C7BD1C7F58BC00842AAE /* CTTopicView.xib in Resources */,
@@ -888,6 +918,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE131A0D1C82662400A4D78A /* CTExpertDetailViewController.xib in Resources */,
+				CE53BB011C935C9A00263685 /* CTAlertView.xib in Resources */,
 				CEC08E8F1C923FB6007C0EFD /* CTAppointmentViewController.xib in Resources */,
 				CEA46DE71C8045370092D842 /* CTPriceView.xib in Resources */,
 				CE19C7BE1C7F58BC00842AAE /* CTTopicView.xib in Resources */,
@@ -902,6 +933,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE19C7A61C7CBFF500842AAE /* CTLink.m in Sources */,
+				CE53BAFA1C93586000263685 /* CTAlertView.m in Sources */,
 				54579CC71C907A3000DAB0A4 /* CTCustomerProfileView.m in Sources */,
 				CE19C79C1C7CBCF800842AAE /* CTExpertBioView.m in Sources */,
 				CE19C7C11C7F61F100842AAE /* CTSectionView.m in Sources */,
@@ -994,6 +1026,7 @@
 				CE57D5021C440C1600DB72C4 /* CTHeaderCellAdapter.m in Sources */,
 				CE57D4C91C43C63500DB72C4 /* CTUser.m in Sources */,
 				CE00E1001C48846F00E7474D /* CTRecommendedExpertModule.m in Sources */,
+				CE53BAFB1C93586000263685 /* CTAlertView.m in Sources */,
 				CEA46DE21C7FCB760092D842 /* UIView+InterfaceBuilder.m in Sources */,
 				CE00E0FB1C48844500E7474D /* CTRecommendedExpertSectionController.m in Sources */,
 				CE00E0F11C48834A00E7474D /* CTInstructionSectionController.m in Sources */,
@@ -1050,6 +1083,7 @@
 				CE57D5031C440C1600DB72C4 /* CTHeaderCellAdapter.m in Sources */,
 				CE57D4CA1C43C63500DB72C4 /* CTUser.m in Sources */,
 				CE00E1011C48846F00E7474D /* CTRecommendedExpertModule.m in Sources */,
+				CE53BAFC1C93586000263685 /* CTAlertView.m in Sources */,
 				CEA46DE31C7FCB760092D842 /* UIView+InterfaceBuilder.m in Sources */,
 				CE00E0FC1C48844500E7474D /* CTRecommendedExpertSectionController.m in Sources */,
 				CE00E0F21C48834A00E7474D /* CTInstructionSectionController.m in Sources */,
