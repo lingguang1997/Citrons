@@ -35,7 +35,8 @@
 }
 
 - (NSArray *)data {
-    return @[@{kCTIconCellTitleKey: @"我悬赏的问题",
+    return @[@{},//placeholder
+             @{kCTIconCellTitleKey: @"我悬赏的问题",
                kCTIconCellIconKey: @"ProfileMiscIcon",
                kCTIconCellDataKey: _customer.onGoingTopicRequests},
              @{kCTIconCellTitleKey: @"我关注的专家",
@@ -43,7 +44,14 @@
                kCTIconCellDataKey: _customer.interestedInExperts},
              @{kCTIconCellTitleKey: @"我的草稿",
                kCTIconCellIconKey: @"ProfileMiscIcon",
-               kCTIconCellDataKey: @(1)}];
+               kCTIconCellDataKey: @[@"", @""]},
+             @{},//placeholder
+             @{kCTIconCellTitleKey: @"成为专家",
+               kCTIconCellIconKey: @"ProfileMiscIcon"},
+             @{},//placeholder
+             @{kCTIconCellTitleKey: @"帮助",
+               kCTIconCellIconKey: @"ProfileMiscIcon"}
+             ];
 }
 
 

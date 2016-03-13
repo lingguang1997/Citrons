@@ -13,5 +13,5 @@ static NSString * const kCTIconCellIconKey      = @"CTIconCellIconKey";
 static NSString * const kCTIconCellDataKey      = @"CTIconCellDataKey";
 
 @interface CTIconCell : AKTableViewCell
-
+- (void)updateNumber:(CGFloat)number;
 @end

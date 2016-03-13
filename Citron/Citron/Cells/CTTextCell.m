@@ -12,7 +12,9 @@
 static CGFloat const kLeftPadding   = 16.0f;
 static CGFloat const kRightPadding  = 16.0f;
 
-@interface CTTextCell ()
+@interface CTTextCell (){
+    UIView  *sepLine;
+}
 
 @property (nonatomic, nonnull) UILabel  *titleLabel;
 @property (nonatomic, nonnull) UILabel  *subTitleLabel;
@@ -32,6 +34,9 @@ static CGFloat const kRightPadding  = 16.0f;
         _subTitleLabel.textAlignment = NSTextAlignmentRight;
         [self addSubview:_subTitleLabel];
         self.contentView.backgroundColor = [UIColor whiteColor];
+        sepLine = [[UIView alloc] initWithFrame:CGRectZero];
+        sepLine.backgroundColor = [UIColor colorWithRed:223.0/255.0 green:223.0/255.0 blue:223.0/255.0 alpha:1.0];
+        [self addSubview:sepLine];
     }
     return self;
 }
@@ -43,6 +48,8 @@ static CGFloat const kRightPadding  = 16.0f;
     
     _subTitleLabel.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame) - kRightPadding, CGRectGetHeight(self.frame));
     _subTitleLabel.center = CGPointMake(_subTitleLabel.center.x, CGRectGetHeight(self.frame) / 2);
+    
+    sepLine.frame = CGRectMake(0, CGRectGetHeight(self.frame) - 0.5f, CGRectGetWidth(self.frame), 0.5f);
 }
 
 

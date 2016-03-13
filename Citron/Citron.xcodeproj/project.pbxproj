@@ -25,6 +25,7 @@
 		54579CE71C93191300DAB0A4 /* CTProfileMiscSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54579CE61C93191300DAB0A4 /* CTProfileMiscSectionController.m */; };
 		54579CEA1C931BB100DAB0A4 /* CTProfileMiscModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 54579CE91C931BB100DAB0A4 /* CTProfileMiscModule.m */; };
 		54579CED1C931CF100DAB0A4 /* CTProfileQuestionStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54579CEC1C931CF100DAB0A4 /* CTProfileQuestionStatusCell.m */; };
+		54579CF01C95D26000DAB0A4 /* CTBlankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54579CEF1C95D26000DAB0A4 /* CTBlankCell.m */; };
 		CE00E0E11C487B0800E7474D /* CTStarExpertSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00E0E01C487B0800E7474D /* CTStarExpertSectionController.m */; };
 		CE00E0E21C487B0800E7474D /* CTStarExpertSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00E0E01C487B0800E7474D /* CTStarExpertSectionController.m */; };
 		CE00E0E31C487B0800E7474D /* CTStarExpertSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00E0E01C487B0800E7474D /* CTStarExpertSectionController.m */; };
@@ -266,6 +267,8 @@
 		54579CE91C931BB100DAB0A4 /* CTProfileMiscModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTProfileMiscModule.m; sourceTree = "<group>"; };
 		54579CEB1C931CF100DAB0A4 /* CTProfileQuestionStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTProfileQuestionStatusCell.h; sourceTree = "<group>"; };
 		54579CEC1C931CF100DAB0A4 /* CTProfileQuestionStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTProfileQuestionStatusCell.m; sourceTree = "<group>"; };
+		54579CEE1C95D26000DAB0A4 /* CTBlankCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBlankCell.h; sourceTree = "<group>"; };
+		54579CEF1C95D26000DAB0A4 /* CTBlankCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBlankCell.m; sourceTree = "<group>"; };
 		CE00E0DF1C487B0800E7474D /* CTStarExpertSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTStarExpertSectionController.h; sourceTree = "<group>"; };
 		CE00E0E01C487B0800E7474D /* CTStarExpertSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTStarExpertSectionController.m; sourceTree = "<group>"; };
 		CE00E0E41C48810400E7474D /* CTCategorySectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCategorySectionController.h; sourceTree = "<group>"; };
@@ -619,6 +622,8 @@
 				54579CDB1C92B04A00DAB0A4 /* CTTextCell.m */,
 				54579CDD1C92F89400DAB0A4 /* CTIconCell.h */,
 				54579CDE1C92F89400DAB0A4 /* CTIconCell.m */,
+				54579CEE1C95D26000DAB0A4 /* CTBlankCell.h */,
+				54579CEF1C95D26000DAB0A4 /* CTBlankCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -936,6 +941,7 @@
 				CE955E201C72D3F40040C70E /* CTTagView.m in Sources */,
 				CEF1F5BC1C55CAFE0062B243 /* CTHTTPSessionManager.m in Sources */,
 				54579CC11C9002C800DAB0A4 /* CTProfileCoverCell.m in Sources */,
+				54579CF01C95D26000DAB0A4 /* CTBlankCell.m in Sources */,
 				CE00E0E61C48810400E7474D /* CTCategorySectionController.m in Sources */,
 				CE00E0FA1C48844500E7474D /* CTRecommendedExpertSectionController.m in Sources */,
 				CE57D5011C440C1600DB72C4 /* CTHeaderCellAdapter.m in Sources */,
