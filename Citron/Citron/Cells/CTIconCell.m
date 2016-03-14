@@ -9,9 +9,9 @@
 #import "CTIconCell.h"
 #import "UIFont+CTFont.h"
 
-static CGFloat const kRightPadding              = 20.0f;
-static CGFloat const kIconCellNumberPadding     = 12.0f;
-static CGFloat const kIconCellNumberHeight      = 21.0f;
+static CGFloat const kRightPadding = 20.0f;
+static CGFloat const kIconCellNumberPadding = 12.0f;
+static CGFloat const kIconCellNumberHeight = 21.0f;
 
 @interface CTIconCell (){
     UIColor *highlightBGColor;
