@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		541DC0E01C9848A500A37B82 /* CTQuestionsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 541DC0DF1C9848A500A37B82 /* CTQuestionsListViewController.m */; };
+		541DC0E31C9850D600A37B82 /* CTQuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 541DC0E21C9850D600A37B82 /* CTQuestionTableViewCell.m */; };
+		541DC0E61C98F64D00A37B82 /* CTMyQuestionsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541DC0E51C98F64D00A37B82 /* CTMyQuestionsStoryBoard.storyboard */; };
+		541DC0EC1C9971D600A37B82 /* CTQuestionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 541DC0EB1C9971D600A37B82 /* CTQuestionDetailViewController.m */; };
 		54579CB81C8FDB9800DAB0A4 /* CTProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54579CB71C8FDB9800DAB0A4 /* CTProfileViewController.m */; };
 		54579CBB1C8FF3E400DAB0A4 /* CTProfileSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54579CBA1C8FF3E400DAB0A4 /* CTProfileSectionController.m */; };
 		54579CBE1C8FFC6C00DAB0A4 /* CTProfileCoverCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54579CBD1C8FFC6C00DAB0A4 /* CTProfileCoverCellAdapter.m */; };
@@ -231,6 +235,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		541DC0DE1C9848A500A37B82 /* CTQuestionsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTQuestionsListViewController.h; path = Citron/Profile/CTQuestionsListViewController.h; sourceTree = SOURCE_ROOT; };
+		541DC0DF1C9848A500A37B82 /* CTQuestionsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTQuestionsListViewController.m; path = Citron/Profile/CTQuestionsListViewController.m; sourceTree = SOURCE_ROOT; };
+		541DC0E11C9850D600A37B82 /* CTQuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTQuestionTableViewCell.h; sourceTree = "<group>"; };
+		541DC0E21C9850D600A37B82 /* CTQuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTQuestionTableViewCell.m; sourceTree = "<group>"; };
+		541DC0E51C98F64D00A37B82 /* CTMyQuestionsStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTMyQuestionsStoryBoard.storyboard; sourceTree = "<group>"; };
+		541DC0EA1C9971D600A37B82 /* CTQuestionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTQuestionDetailViewController.h; path = Citron/Profile/CTQuestionDetailViewController.h; sourceTree = SOURCE_ROOT; };
+		541DC0EB1C9971D600A37B82 /* CTQuestionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTQuestionDetailViewController.m; path = Citron/Profile/CTQuestionDetailViewController.m; sourceTree = SOURCE_ROOT; };
 		54579CB61C8FDB9800DAB0A4 /* CTProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTProfileViewController.h; path = Citron/Profile/CTProfileViewController.h; sourceTree = SOURCE_ROOT; };
 		54579CB71C8FDB9800DAB0A4 /* CTProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTProfileViewController.m; path = Citron/Profile/CTProfileViewController.m; sourceTree = SOURCE_ROOT; };
 		54579CB91C8FF3E400DAB0A4 /* CTProfileSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTProfileSectionController.h; sourceTree = "<group>"; };
@@ -431,13 +442,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		541DC0E41C98F38700A37B82 /* xibs */ = {
+			isa = PBXGroup;
+			children = (
+				541DC0E51C98F64D00A37B82 /* CTMyQuestionsStoryBoard.storyboard */,
+			);
+			name = xibs;
+			path = Citron/Profile/xibs;
+			sourceTree = SOURCE_ROOT;
+		};
 		54579CAF1C8FD83400DAB0A4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				541DC0E41C98F38700A37B82 /* xibs */,
 				54579CB61C8FDB9800DAB0A4 /* CTProfileViewController.h */,
 				54579CB71C8FDB9800DAB0A4 /* CTProfileViewController.m */,
 				54579CC51C907A3000DAB0A4 /* CTCustomerProfileView.h */,
 				54579CC61C907A3000DAB0A4 /* CTCustomerProfileView.m */,
+				541DC0DE1C9848A500A37B82 /* CTQuestionsListViewController.h */,
+				541DC0DF1C9848A500A37B82 /* CTQuestionsListViewController.m */,
+				541DC0EA1C9971D600A37B82 /* CTQuestionDetailViewController.h */,
+				541DC0EB1C9971D600A37B82 /* CTQuestionDetailViewController.m */,
 			);
 			name = Profile;
 			path = Personal;
@@ -624,6 +649,8 @@
 				54579CDE1C92F89400DAB0A4 /* CTIconCell.m */,
 				54579CEE1C95D26000DAB0A4 /* CTBlankCell.h */,
 				54579CEF1C95D26000DAB0A4 /* CTBlankCell.m */,
+				541DC0E11C9850D600A37B82 /* CTQuestionTableViewCell.h */,
+				541DC0E21C9850D600A37B82 /* CTQuestionTableViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -874,6 +901,7 @@
 				CEA46DE51C8045370092D842 /* CTPriceView.xib in Resources */,
 				CEE0A9651C87322200679351 /* CTLinkView.xib in Resources */,
 				CEC08E8D1C923FB6007C0EFD /* CTAppointmentViewController.xib in Resources */,
+				541DC0E61C98F64D00A37B82 /* CTMyQuestionsStoryBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -927,6 +955,7 @@
 				54579CB81C8FDB9800DAB0A4 /* CTProfileViewController.m in Sources */,
 				CEF1F5B71C544C730062B243 /* CTWXHTTPSessionManager.m in Sources */,
 				CE46E8FA1C423D820075CA29 /* CTMainViewController.m in Sources */,
+				541DC0E01C9848A500A37B82 /* CTQuestionsListViewController.m in Sources */,
 				CE19C7B81C7F578D00842AAE /* CTTopicView.m in Sources */,
 				CE00E0E11C487B0800E7474D /* CTStarExpertSectionController.m in Sources */,
 				CED78F481C4EA0F300967CE7 /* CTRecommendedExpertCell.m in Sources */,
@@ -949,6 +978,7 @@
 				CE57D4E71C43EA0100DB72C4 /* CTStarExpertsCellAdapter.m in Sources */,
 				54579CC41C9071DA00DAB0A4 /* CTProfileQuestionStatusCellAdapter.m in Sources */,
 				CE57D4E11C43E3C300DB72C4 /* UIImage+CTImage.m in Sources */,
+				541DC0EC1C9971D600A37B82 /* CTQuestionDetailViewController.m in Sources */,
 				CE00E1091C48FB4B00E7474D /* CTCategoryCell.m in Sources */,
 				CE19C7A11C7CBE6600842AAE /* CTExpertLinksView.m in Sources */,
 				CE57D4C31C43C5FC00DB72C4 /* CTComment.m in Sources */,
@@ -970,6 +1000,7 @@
 				CE1319FE1C815FC600A4D78A /* CTTopicsView.m in Sources */,
 				54579CED1C931CF100DAB0A4 /* CTProfileQuestionStatusCell.m in Sources */,
 				CE57D4DC1C43E23900DB72C4 /* UIFont+CTFont.m in Sources */,
+				541DC0E31C9850D600A37B82 /* CTQuestionTableViewCell.m in Sources */,
 				CED78F431C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m in Sources */,
 				CE57D4C81C43C63500DB72C4 /* CTUser.m in Sources */,
 				CE02C46D1C8CF63300ABD805 /* CTTopicDetailViewController.m in Sources */,

@@ -36,7 +36,7 @@
 }
 
 - (NSArray *)data {
-    return @[_customer, @{kCTTextCellTitleKey: @"我的问题", kCTTextCellSubTitleKey: @"查看全部"}, @[]];
+    return @[_customer, @{kCTTextCellTitleKey: @"我的问题", kCTTextCellSubTitleKey: @"查看全部", kCTTextCellDataKey: _customer}, @[]];
 }
 
 @end

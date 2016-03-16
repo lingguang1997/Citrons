@@ -8,8 +8,9 @@
 
 #import <AppKit/AKTableViewCell.h>
 
-static NSString * const kCTTextCellTitleKey     = @"CTTextCellTitleKey";
-static NSString * const kCTTextCellSubTitleKey  = @"CTTextCellSubTitleKey";
+static NSString * const kCTTextCellTitleKey = @"CTTextCellTitleKey";
+static NSString * const kCTTextCellSubTitleKey = @"CTTextCellSubTitleKey";
+static NSString * const kCTTextCellDataKey = @"CTTextCellDataKey";
 
 @interface CTTextCell : AKTableViewCell
 

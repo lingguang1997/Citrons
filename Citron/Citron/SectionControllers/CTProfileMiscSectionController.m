@@ -28,5 +28,9 @@
     return [super dataViewController:dataViewController item:item cellForRowAtIndexPath:indexPath];
 }
 
+- (void)dataViewController:(AKDataViewController *)dataViewController item:(id<NSObject>)item didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
 
 @end

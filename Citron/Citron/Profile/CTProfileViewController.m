@@ -13,7 +13,9 @@
 #import "CTProfileMiscSectionController.h"
 #import "CTProfileMiscModule.h"
 
-@interface CTProfileViewController ()
+@interface CTProfileViewController (){
+    UILabel *titleLabel;
+}
 
 @end
 
@@ -33,8 +35,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.title = @"个人中心";
+
+    titleLabel = [[UILabel alloc] init];
+    titleLabel.text = @"个人中心";
+    [titleLabel sizeToFit];
+    
+    self.title = @"";
+    
+    self.navigationItem.titleView = titleLabel;
 }
 
 - (void)didReceiveMemoryWarning {
