@@ -49,7 +49,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="48" id="JIH-6E-Csf"/>
                                                             </constraints>
-                                                            <mutableString key="text">在学术界， 一般说到推荐引擎， 我们都是围绕着某一种单独的算法的效果优化进行的， 例如按内容推荐， 协同过滤（包括item-based, user-based, SVD分解等），上下文推荐，Constraint-based推荐，图关系挖掘等。 很多比较牛的单个算法， 就能在某个指标上取得较好效果， 例如MAE，RMSE。。。不过有自己的优点， 每种算法也有自己的缺点， 例如按内容推荐主要推荐和用户历史结果相似的item，一般的item-based容易推荐热门item（被更多人投票过）。。。。   所以在工业界，例如各互联网公司， 都会使用多种算法进行互相配合， 取长补短， 配合产品提升效果。而且在 完整的推荐系统中，不仅有传统的Rating推荐， 还需要辅以非常多的挖掘， Ranking来达到预期效果。</mutableString>
+                                                            <string key="text">在学术界， 一般说到推荐引擎， 我们都是围绕着某一种单独的算法的效果优化进行的， 例如按内容推荐， 协同过滤（包括item-based, user-based, SVD分解等），上下文推荐，Constraint-based推荐，图关系挖掘等。 很多比较牛的单个算法， 就能在某个指标上取得较好效果， 例如MAE，RMSE。。。不过有自己的优点， 每种算法也有自己的缺点， 例如按内容推荐主要推荐和用户历史结果相似的item，一般的item-based容易推荐热门item（被更多人投票过）。。。。   所以在工业界，例如各互联网公司， 都会使用多种算法进行互相配合， 取长补短， 配合产品提升效果。而且在 完整的推荐系统中，不仅有传统的Rating推荐， 还需要辅以非常多的挖掘， Ranking来达到预期效果。</string>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
@@ -180,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="318" y="380"/>
         </scene>
-        <!--View Controller-->
+        <!--Question Detail View Controller-->
         <scene sceneID="jiJ-6i-ezS">
             <objects>
-                <viewController id="idn-6A-1v8" sceneMemberID="viewController">
+                <viewController id="idn-6A-1v8" customClass="CTQuestionDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BuX-RJ-Ffz"/>
                         <viewControllerLayoutGuide type="bottom" id="YeF-nP-5CG"/>
@@ -191,12 +191,456 @@
                     <view key="view" contentMode="scaleToFill" id="t3i-8X-ihQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWl-mu-yMx">
+                                <rect key="frame" x="0.0" y="20" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  我的问题  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U19-5n-3vE">
+                                        <rect key="frame" x="30" y="20" width="76" height="26"/>
+                                        <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="9EN-CP-z4M"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjt-VA-WK3">
+                                        <rect key="frame" x="30" y="53" width="540" height="106"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="现在很多大数据公司，会标榜自己是">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="PingFangSC-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="”">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="数据驱动型公司">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="PingFangSC-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="“">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="，或者有一些标榜自己是">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="PingFangSC-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="”">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="技术驱动型公司">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="PingFangSC-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="“">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="，请问业内专业人士，这怎么区分呢？这两种公司在业务和运作上各有什么特质呢？">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="PingFangSC-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="作为行业小白，我的粗略理解">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="PingFangSC-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="——">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="如果公司拥有持续的数据来源，并以数据为主要卖点的公司，可以称其为">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="PingFangSC-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="&quot;">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="数据驱动型公司">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="PingFangSC-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="&quot;">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="。如果公司本身数据不足，主要是用技术去服务有数据的企业，以及依托自身技术实力开发数据产品的，这样的公司可以称其为">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="PingFangSC-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="”">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="技术驱动型公司">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="PingFangSC-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="“">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="。">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="PingFangSC-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="知友们怎么看？">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="PingFangSC-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xnw-z7-9Gp">
+                                        <rect key="frame" x="0.0" y="245" width="600" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="TZ0-0Y-9XW"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" image="ProfilePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="S08-JU-fqC">
+                                        <rect key="frame" x="30" y="273" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Y2T-Mx-Gh4"/>
+                                            <constraint firstAttribute="width" constant="50" id="uYE-AN-IcY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple数据科学家" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ec3-02-1Xi">
+                                        <rect key="frame" x="92" y="274" width="478" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="卡耐基梅隆大学计算机博士" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yk-eV-eep">
+                                        <rect key="frame" x="92" y="299" width="478" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jobs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhz-ns-6m5">
+                                        <rect key="frame" x="41" y="329" width="29" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dr-ky-Gpx">
+                                        <rect key="frame" x="92" y="325" width="478" height="46"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1小时前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rV4-1X-ti2">
+                                        <rect key="frame" x="535" y="34" width="35" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="WEh-Hv-tdh">
+                                        <rect key="frame" x="92" y="380" width="13" height="13"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="13" id="R0k-W1-qbd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBu-eB-HCm">
+                                        <rect key="frame" x="177" y="183" width="246" height="42"/>
+                                        <color key="backgroundColor" red="0.1176470588" green="0.68235294120000001" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="246" id="F96-eq-aOF"/>
+                                            <constraint firstAttribute="height" constant="42" id="rl9-8h-PBh"/>
+                                        </constraints>
+                                        <state key="normal" title="查看聊天记录">
+                                            <color key="titleColor" red="0.98039215690000003" green="0.96862745100000003" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="已为10人解决问题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZQ-7b-8mA">
+                                        <rect key="frame" x="109" y="381" width="461" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Svw-pB-h6X">
+                                        <rect key="frame" x="15" y="408" width="570" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="9n5-Ex-7zG"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="753" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzi-wB-7Xv">
+                                        <rect key="frame" x="30" y="422" width="97" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="TLE-Yg-5Xg"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="  ￥250">
+                                                <attributes>
+                                                    <color key="NSColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="7" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="/次">
+                                                <attributes>
+                                                    <color key="NSColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="12" name="PingFangSC-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="7" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="  ">
+                                                <attributes>
+                                                    <color key="NSColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="19" name="PingFangSC-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="7" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="753" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="原价" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZF-ym-vTN">
+                                        <rect key="frame" x="146" y="422" width="18" height="11"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                        <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="753" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KP8-fw-Ocf">
+                                        <rect key="frame" x="146" y="433" width="50" height="19"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="￥500">
+                                                <attributes>
+                                                    <color key="NSColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="13" name="PingFangSC-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="/次">
+                                                <attributes>
+                                                    <color key="NSColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="9" name="PingFangSC-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Svw-pB-h6X" firstAttribute="centerX" secondItem="pWl-mu-yMx" secondAttribute="centerX" id="0Am-hh-Wpa"/>
+                                    <constraint firstItem="vZF-ym-vTN" firstAttribute="top" secondItem="Zzi-wB-7Xv" secondAttribute="top" id="1mn-Kd-J4h"/>
+                                    <constraint firstItem="rV4-1X-ti2" firstAttribute="bottom" secondItem="U19-5n-3vE" secondAttribute="bottom" id="3ky-Vc-edu"/>
+                                    <constraint firstItem="Svw-pB-h6X" firstAttribute="width" secondItem="pWl-mu-yMx" secondAttribute="width" constant="-30" id="58l-Py-AeS"/>
+                                    <constraint firstItem="Svw-pB-h6X" firstAttribute="top" secondItem="uZQ-7b-8mA" secondAttribute="bottom" constant="15" id="5PG-x2-C0g"/>
+                                    <constraint firstItem="zjt-VA-WK3" firstAttribute="top" secondItem="U19-5n-3vE" secondAttribute="bottom" constant="7" id="7gl-0P-x89"/>
+                                    <constraint firstItem="1yk-eV-eep" firstAttribute="leading" secondItem="S08-JU-fqC" secondAttribute="trailing" constant="12" id="8w0-Oz-MKR"/>
+                                    <constraint firstItem="WEh-Hv-tdh" firstAttribute="top" secondItem="Yhz-ns-6m5" secondAttribute="bottom" constant="35" id="9wX-ku-ElL"/>
+                                    <constraint firstItem="uZQ-7b-8mA" firstAttribute="leading" secondItem="WEh-Hv-tdh" secondAttribute="trailing" constant="4" id="AVT-q7-et2"/>
+                                    <constraint firstItem="NBu-eB-HCm" firstAttribute="top" secondItem="zjt-VA-WK3" secondAttribute="bottom" constant="24" id="D5h-Oq-Lx8"/>
+                                    <constraint firstItem="S08-JU-fqC" firstAttribute="top" secondItem="xnw-z7-9Gp" secondAttribute="bottom" constant="27" id="Dge-XR-XNk"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ec3-02-1Xi" secondAttribute="trailing" constant="30" id="E5S-sk-eJf"/>
+                                    <constraint firstItem="zjt-VA-WK3" firstAttribute="centerX" secondItem="pWl-mu-yMx" secondAttribute="centerX" id="Fw7-Zc-glk"/>
+                                    <constraint firstItem="Yhz-ns-6m5" firstAttribute="centerX" secondItem="S08-JU-fqC" secondAttribute="centerX" id="GT2-m7-Tjd"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zzi-wB-7Xv" secondAttribute="bottom" constant="30" id="HKU-05-vPh"/>
+                                    <constraint firstItem="xnw-z7-9Gp" firstAttribute="centerX" secondItem="NBu-eB-HCm" secondAttribute="centerX" id="Hgh-Pi-hUZ"/>
+                                    <constraint firstItem="xnw-z7-9Gp" firstAttribute="top" secondItem="NBu-eB-HCm" secondAttribute="bottom" constant="20" id="HlB-0q-Kuw"/>
+                                    <constraint firstItem="9dr-ky-Gpx" firstAttribute="leading" secondItem="S08-JU-fqC" secondAttribute="trailing" constant="12" id="Js1-eQ-eeL"/>
+                                    <constraint firstItem="xnw-z7-9Gp" firstAttribute="width" secondItem="pWl-mu-yMx" secondAttribute="width" id="KfM-wv-2HB"/>
+                                    <constraint firstItem="uZQ-7b-8mA" firstAttribute="centerY" secondItem="WEh-Hv-tdh" secondAttribute="centerY" id="L5Y-sQ-B4C"/>
+                                    <constraint firstItem="KP8-fw-Ocf" firstAttribute="leading" secondItem="vZF-ym-vTN" secondAttribute="leading" id="LGs-mR-V5w"/>
+                                    <constraint firstItem="U19-5n-3vE" firstAttribute="leading" secondItem="pWl-mu-yMx" secondAttribute="leading" constant="30" id="MmM-Y9-qEN"/>
+                                    <constraint firstItem="KP8-fw-Ocf" firstAttribute="bottom" secondItem="Zzi-wB-7Xv" secondAttribute="bottom" id="SLY-0x-ECl"/>
+                                    <constraint firstAttribute="trailing" secondItem="9dr-ky-Gpx" secondAttribute="trailing" constant="30" id="TIO-e5-a8E"/>
+                                    <constraint firstItem="xnw-z7-9Gp" firstAttribute="centerX" secondItem="pWl-mu-yMx" secondAttribute="centerX" id="TUb-7O-cpr"/>
+                                    <constraint firstItem="zjt-VA-WK3" firstAttribute="leading" secondItem="pWl-mu-yMx" secondAttribute="leading" constant="30" id="X1i-C4-fet"/>
+                                    <constraint firstItem="vZF-ym-vTN" firstAttribute="leading" secondItem="Zzi-wB-7Xv" secondAttribute="trailing" constant="19" id="XCN-Gy-8lE"/>
+                                    <constraint firstItem="Yhz-ns-6m5" firstAttribute="top" secondItem="S08-JU-fqC" secondAttribute="bottom" constant="6" id="ZKo-ln-wDu"/>
+                                    <constraint firstAttribute="trailing" secondItem="rV4-1X-ti2" secondAttribute="trailing" constant="30" id="ZQY-om-Tfq"/>
+                                    <constraint firstItem="WEh-Hv-tdh" firstAttribute="leading" secondItem="Ec3-02-1Xi" secondAttribute="leading" id="acg-mX-80O"/>
+                                    <constraint firstAttribute="trailing" secondItem="uZQ-7b-8mA" secondAttribute="trailing" constant="30" id="bfF-ql-X9c"/>
+                                    <constraint firstItem="9dr-ky-Gpx" firstAttribute="top" secondItem="1yk-eV-eep" secondAttribute="bottom" constant="11" id="bwv-xW-mY7"/>
+                                    <constraint firstItem="U19-5n-3vE" firstAttribute="top" secondItem="pWl-mu-yMx" secondAttribute="top" constant="20" id="chi-zs-lmF"/>
+                                    <constraint firstItem="Zzi-wB-7Xv" firstAttribute="leading" secondItem="pWl-mu-yMx" secondAttribute="leading" constant="30" id="fBX-ff-WF7"/>
+                                    <constraint firstItem="Ec3-02-1Xi" firstAttribute="leading" secondItem="S08-JU-fqC" secondAttribute="trailing" constant="12" id="fLL-ye-Lje"/>
+                                    <constraint firstItem="WEh-Hv-tdh" firstAttribute="top" secondItem="9dr-ky-Gpx" secondAttribute="bottom" constant="9" id="kSb-tg-g9T"/>
+                                    <constraint firstItem="Ec3-02-1Xi" firstAttribute="top" secondItem="xnw-z7-9Gp" secondAttribute="bottom" constant="28" id="kkV-BK-Htv"/>
+                                    <constraint firstItem="Zzi-wB-7Xv" firstAttribute="top" secondItem="Svw-pB-h6X" secondAttribute="bottom" constant="13" id="oxf-Wh-bQf"/>
+                                    <constraint firstAttribute="trailing" secondItem="zjt-VA-WK3" secondAttribute="trailing" constant="30" id="pWq-E3-RBQ"/>
+                                    <constraint firstItem="1yk-eV-eep" firstAttribute="top" secondItem="Ec3-02-1Xi" secondAttribute="bottom" constant="7" id="sBO-u0-cUv"/>
+                                    <constraint firstAttribute="trailing" secondItem="1yk-eV-eep" secondAttribute="trailing" constant="30" id="tBB-52-qRR"/>
+                                    <constraint firstItem="S08-JU-fqC" firstAttribute="leading" secondItem="pWl-mu-yMx" secondAttribute="leading" constant="30" id="ypX-zi-Nni"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WO4-i1-hnX">
+                                <rect key="frame" x="0.0" y="545" width="600" height="55"/>
+                                <color key="backgroundColor" red="0.1176470588" green="0.68235294120000001" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="f6t-PW-8bP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="开始讨论">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.96862745100000003" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pWl-mu-yMx" firstAttribute="height" secondItem="t3i-8X-ihQ" secondAttribute="height" id="8mw-Zo-7zi"/>
+                            <constraint firstItem="pWl-mu-yMx" firstAttribute="top" secondItem="BuX-RJ-Ffz" secondAttribute="bottom" id="Ade-ew-89W"/>
+                            <constraint firstItem="WO4-i1-hnX" firstAttribute="width" secondItem="t3i-8X-ihQ" secondAttribute="width" id="Ckn-Md-mey"/>
+                            <constraint firstItem="WO4-i1-hnX" firstAttribute="centerX" secondItem="t3i-8X-ihQ" secondAttribute="centerX" id="Ec5-r2-o7C"/>
+                            <constraint firstItem="pWl-mu-yMx" firstAttribute="centerX" secondItem="t3i-8X-ihQ" secondAttribute="centerX" id="LVl-PT-RfD"/>
+                            <constraint firstItem="pWl-mu-yMx" firstAttribute="width" secondItem="t3i-8X-ihQ" secondAttribute="width" id="XTg-rr-uGP"/>
+                            <constraint firstItem="YeF-nP-5CG" firstAttribute="top" secondItem="WO4-i1-hnX" secondAttribute="bottom" id="YFs-R2-VDG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chatHistoryButton" destination="NBu-eB-HCm" id="mkF-a3-cv9"/>
+                        <outlet property="contentLabel" destination="zjt-VA-WK3" id="RfE-XI-6iI"/>
+                        <outlet property="dateLabel" destination="rV4-1X-ti2" id="k1p-nU-lEc"/>
+                        <outlet property="originalPriceLabel" destination="KP8-fw-Ocf" id="AMr-wr-RJi"/>
+                        <outlet property="priceLabel" destination="Zzi-wB-7Xv" id="3YC-mN-bEh"/>
+                        <outlet property="profileImageView" destination="S08-JU-fqC" id="22z-Ch-yPX"/>
+                        <outlet property="questionTitleLabel" destination="U19-5n-3vE" id="K09-j8-yZc"/>
+                        <outlet property="resolvedQuestionLabel" destination="uZQ-7b-8mA" id="w7V-vZ-Mnv"/>
+                        <outlet property="schoolLabel" destination="1yk-eV-eep" id="CY7-dP-wng"/>
+                        <outlet property="sepLine" destination="xnw-z7-9Gp" id="VXH-FX-Pr2"/>
+                        <outlet property="tagView" destination="9dr-ky-Gpx" id="VmP-vM-JXC"/>
+                        <outlet property="titleLabel" destination="Ec3-02-1Xi" id="qca-WQ-gmf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="98k-4f-ilY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1168" y="28"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PhoneIcon" width="13" height="13"/>
+        <image name="ProfilePlaceholder" width="680" height="350"/>
+    </resources>
 </document>

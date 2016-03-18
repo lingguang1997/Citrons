@@ -30,7 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+    self.title = @"";
 }
 
 - (void)didReceiveMemoryWarning {

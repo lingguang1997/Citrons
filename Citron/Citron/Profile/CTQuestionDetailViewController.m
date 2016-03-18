@@ -17,12 +17,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _chatHistoryButton.layer.cornerRadius = 3.0f;
+    _profileImageView.layer.cornerRadius = CGRectGetHeight(_profileImageView.frame) / 2;
+    _questionTitleLabel.layer.cornerRadius = 2.0f;
+    _questionTitleLabel.clipsToBounds = YES;
+    
+    CGRect frame = _priceLabel.frame;
+    frame.size.width += 30.0f;
+    _priceLabel.frame = frame;
+    
+    _priceLabel.layer.borderColor = [UIColor blueColor].CGColor;
+    _priceLabel.layer.borderWidth = 0.5f;
+    _priceLabel.layer.cornerRadius = CGRectGetHeight(_priceLabel.frame) / 2;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end
