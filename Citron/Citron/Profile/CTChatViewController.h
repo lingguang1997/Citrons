@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CTChatViewController : UIViewController{
+@interface CTChatViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
     UITableView *chatTableView;
     
 }
-
+@property (nonatomic, nonnull) IBOutlet UIView *bottomView;
+@property (nonatomic, nonnull) IBOutlet UITextField *textField;
 @end

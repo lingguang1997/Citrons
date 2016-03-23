@@ -666,7 +666,9 @@ Cg
                                             <constraint firstAttribute="height" constant="44" id="Dt8-fg-hA6"/>
                                             <constraint firstAttribute="width" constant="44" id="u7g-Lu-Oig"/>
                                         </constraints>
-                                        <state key="normal" title="&lt;"/>
+                                        <state key="normal" title="&lt;">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="back:" destination="aQc-cq-A8x" eventType="touchUpInside" id="5P0-pK-cE5"/>
                                         </connections>
@@ -714,6 +716,7 @@ Cg
                                 <rect key="frame" x="0.0" y="100" width="600" height="450"/>
                                 <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <color key="sectionIndexBackgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpertChatCell" id="2dT-hG-RME">
@@ -745,18 +748,28 @@ Cg
                                         <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="aC1-Ht-w0e" appends="YES" id="fnB-eV-4zX"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMj-7K-aK8" userLabel="BottomView">
                                 <rect key="frame" x="0.0" y="550" width="600" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入内容..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8dF-Z6-Dyc">
-                                        <rect key="frame" x="15" y="17" width="532" height="17"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入内容..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8dF-Z6-Dyc">
+                                        <rect key="frame" x="15" y="16" width="532" height="19"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="send"/>
+                                        <connections>
+                                            <action selector="didTappedEnd:" destination="aQc-cq-A8x" eventType="editingDidEnd" id="7CX-qc-rT5"/>
+                                            <outlet property="delegate" destination="aQc-cq-A8x" id="whc-fM-VcV"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqe-uS-M9e">
                                         <rect key="frame" x="562" y="14" width="23" height="22"/>
                                         <state key="normal" image="PictureIcon"/>
+                                        <connections>
+                                            <action selector="didTappedImageButton:" destination="aQc-cq-A8x" eventType="touchUpInside" id="isj-cB-ydr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -772,6 +785,7 @@ Cg
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="zDL-1o-RMs" firstAttribute="centerX" secondItem="y65-OB-7PX" secondAttribute="centerX" id="5Y9-KJ-EVn"/>
                             <constraint firstItem="KMj-7K-aK8" firstAttribute="width" secondItem="y65-OB-7PX" secondAttribute="width" id="AE3-ka-6el"/>
@@ -786,8 +800,19 @@ Cg
                             <constraint firstItem="zDL-1o-RMs" firstAttribute="width" secondItem="y65-OB-7PX" secondAttribute="width" id="w8I-ya-X9j"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomSpacing" destination="jYR-Tu-bSx" id="fv9-Nr-Gr2"/>
+                        <outlet property="bottomView" destination="KMj-7K-aK8" id="R1t-nD-2ET"/>
+                        <outlet property="textField" destination="8dF-Z6-Dyc" id="NHB-Nb-boW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t4g-E4-PQ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="aC1-Ht-w0e">
+                    <connections>
+                        <action selector="didTappedChatView:" destination="aQc-cq-A8x" id="Rtq-Fu-p1d"/>
+                        <outlet property="delegate" destination="aQc-cq-A8x" id="fRK-3P-ftT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2029" y="359"/>
         </scene>

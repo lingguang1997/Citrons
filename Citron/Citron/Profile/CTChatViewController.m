@@ -10,6 +10,8 @@
 
 @interface CTChatViewController ()
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSpacing;
+
 @end
 
 @implementation CTChatViewController
@@ -18,6 +20,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.navigationController setNavigationBarHidden:YES];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
+}
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,17 +33,45 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Keyboard methods
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)keyboardWillChange:(NSNotification *)notification{
+    NSValue *frameValue = notification.userInfo[UIKeyboardFrameEndUserInfoKey];
+    CGRect frame = [frameValue CGRectValue];
+    _bottomSpacing.constant = CGRectGetHeight(self.view.frame) - CGRectGetMinY(frame);
+    [UIView animateWithDuration:0.25f animations:^{
+        [self updateViewConstraints];
+    }];
 }
-*/
+
+#pragma mark - Image Picker Delegate methods
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - IBActions
 - (IBAction)back:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)didTappedEnd:(id)sender {
+    
+}
+
+- (IBAction)didTappedChatView:(id)sender {
+    [_textField resignFirstResponder];
+}
+
+- (IBAction)didTappedImageButton:(id)sender {
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePickerController.delegate = self;
+    [self presentViewController:imagePickerController animated:YES completion:nil];
 }
 
 @end
