@@ -37,6 +37,8 @@
     _actionButton.clipsToBounds = YES;
     _profileImageView.layer.cornerRadius = CGRectGetWidth(_profileImageView.frame) / 2;
     _profileImageView.clipsToBounds = YES;
+    _questionTitleLabel.layer.cornerRadius = 3.0f;
+    _questionTitleLabel.clipsToBounds = YES;
 }
 
 

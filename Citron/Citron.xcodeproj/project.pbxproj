@@ -30,6 +30,8 @@
 		54579CEA1C931BB100DAB0A4 /* CTProfileMiscModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 54579CE91C931BB100DAB0A4 /* CTProfileMiscModule.m */; };
 		54579CED1C931CF100DAB0A4 /* CTProfileQuestionStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54579CEC1C931CF100DAB0A4 /* CTProfileQuestionStatusCell.m */; };
 		54579CF01C95D26000DAB0A4 /* CTBlankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54579CEF1C95D26000DAB0A4 /* CTBlankCell.m */; };
+		54D370F91C9C5A4800E6871A /* CTExpertsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D370F81C9C5A4800E6871A /* CTExpertsListViewController.m */; };
+		54D370FC1CA24E0400E6871A /* CTChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D370FB1CA24E0400E6871A /* CTChatViewController.m */; };
 		CE00E0E11C487B0800E7474D /* CTStarExpertSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00E0E01C487B0800E7474D /* CTStarExpertSectionController.m */; };
 		CE00E0E21C487B0800E7474D /* CTStarExpertSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00E0E01C487B0800E7474D /* CTStarExpertSectionController.m */; };
 		CE00E0E31C487B0800E7474D /* CTStarExpertSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00E0E01C487B0800E7474D /* CTStarExpertSectionController.m */; };
@@ -280,6 +282,10 @@
 		54579CEC1C931CF100DAB0A4 /* CTProfileQuestionStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTProfileQuestionStatusCell.m; sourceTree = "<group>"; };
 		54579CEE1C95D26000DAB0A4 /* CTBlankCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBlankCell.h; sourceTree = "<group>"; };
 		54579CEF1C95D26000DAB0A4 /* CTBlankCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBlankCell.m; sourceTree = "<group>"; };
+		54D370F71C9C5A4800E6871A /* CTExpertsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTExpertsListViewController.h; path = Citron/Profile/CTExpertsListViewController.h; sourceTree = SOURCE_ROOT; };
+		54D370F81C9C5A4800E6871A /* CTExpertsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTExpertsListViewController.m; path = Citron/Profile/CTExpertsListViewController.m; sourceTree = SOURCE_ROOT; };
+		54D370FA1CA24E0400E6871A /* CTChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTChatViewController.h; path = Citron/Profile/CTChatViewController.h; sourceTree = SOURCE_ROOT; };
+		54D370FB1CA24E0400E6871A /* CTChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTChatViewController.m; path = Citron/Profile/CTChatViewController.m; sourceTree = SOURCE_ROOT; };
 		CE00E0DF1C487B0800E7474D /* CTStarExpertSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTStarExpertSectionController.h; sourceTree = "<group>"; };
 		CE00E0E01C487B0800E7474D /* CTStarExpertSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTStarExpertSectionController.m; sourceTree = "<group>"; };
 		CE00E0E41C48810400E7474D /* CTCategorySectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCategorySectionController.h; sourceTree = "<group>"; };
@@ -463,6 +469,10 @@
 				541DC0DF1C9848A500A37B82 /* CTQuestionsListViewController.m */,
 				541DC0EA1C9971D600A37B82 /* CTQuestionDetailViewController.h */,
 				541DC0EB1C9971D600A37B82 /* CTQuestionDetailViewController.m */,
+				54D370F71C9C5A4800E6871A /* CTExpertsListViewController.h */,
+				54D370F81C9C5A4800E6871A /* CTExpertsListViewController.m */,
+				54D370FA1CA24E0400E6871A /* CTChatViewController.h */,
+				54D370FB1CA24E0400E6871A /* CTChatViewController.m */,
 			);
 			name = Profile;
 			path = Personal;
@@ -956,6 +966,7 @@
 				CEF1F5B71C544C730062B243 /* CTWXHTTPSessionManager.m in Sources */,
 				CE46E8FA1C423D820075CA29 /* CTMainViewController.m in Sources */,
 				541DC0E01C9848A500A37B82 /* CTQuestionsListViewController.m in Sources */,
+				54D370F91C9C5A4800E6871A /* CTExpertsListViewController.m in Sources */,
 				CE19C7B81C7F578D00842AAE /* CTTopicView.m in Sources */,
 				CE00E0E11C487B0800E7474D /* CTStarExpertSectionController.m in Sources */,
 				CED78F481C4EA0F300967CE7 /* CTRecommendedExpertCell.m in Sources */,
@@ -964,6 +975,7 @@
 				54579CCA1C9120E700DAB0A4 /* CTCustomer.m in Sources */,
 				CE00E0FF1C48846F00E7474D /* CTRecommendedExpertModule.m in Sources */,
 				CE46E8F71C423D820075CA29 /* AppDelegate.m in Sources */,
+				54D370FC1CA24E0400E6871A /* CTChatViewController.m in Sources */,
 				CE19C78D1C7A7C6200842AAE /* CTPriceView.m in Sources */,
 				54579CEA1C931BB100DAB0A4 /* CTProfileMiscModule.m in Sources */,
 				CE5C1B711C4CDB920093D0C8 /* CTCollectionViewStarExpertsController.m in Sources */,

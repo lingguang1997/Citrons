@@ -7,6 +7,7 @@
 //
 
 #import "CTQuestionDetailViewController.h"
+#import "CTChatViewController.h"
 
 @interface CTQuestionDetailViewController ()
 
@@ -32,5 +33,10 @@
 }
 
 
+- (IBAction)didClickBottomButton:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"CTMyQuestionsStoryBoard" bundle:nil];
+    CTChatViewController *chatVC = [storyboard instantiateViewControllerWithIdentifier:@"ChatViewController"];
+    [self.navigationController pushViewController:chatVC animated:YES];
+}
 
 @end
