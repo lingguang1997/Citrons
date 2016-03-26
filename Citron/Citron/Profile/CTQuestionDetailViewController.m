@@ -30,6 +30,14 @@
     _priceLabel.layer.borderColor = [UIColor blueColor].CGColor;
     _priceLabel.layer.borderWidth = 0.5f;
     _priceLabel.layer.cornerRadius = CGRectGetHeight(_priceLabel.frame) / 2;
+    
+    frame = _sepLine.frame;
+    frame.size.height = 0.5f;
+    _sepLine.frame = frame;
+    
+    frame = _bottomSepLine.frame;
+    frame.size.height = 0.5f;
+    _bottomSepLine.frame = frame;
 }
 
 

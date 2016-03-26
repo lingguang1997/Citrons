@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vzE-RW-i3w">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vzE-RW-i3w">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Questions List View Controller-->
@@ -627,6 +628,7 @@ Cg
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomSepLine" destination="Svw-pB-h6X" id="ePv-IE-GdI"/>
                         <outlet property="chatHistoryButton" destination="NBu-eB-HCm" id="mkF-a3-cv9"/>
                         <outlet property="contentLabel" destination="zjt-VA-WK3" id="RfE-XI-6iI"/>
                         <outlet property="dateLabel" destination="rV4-1X-ti2" id="k1p-nU-lEc"/>
@@ -712,7 +714,7 @@ Cg
                                     <constraint firstAttribute="trailing" secondItem="5Fm-lI-HFM" secondAttribute="trailing" constant="15" id="znB-ab-zEU"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0JB-IF-UtQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0JB-IF-UtQ">
                                 <rect key="frame" x="0.0" y="100" width="600" height="450"/>
                                 <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -720,30 +722,98 @@ Cg
                                 <color key="sectionIndexBackgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpertChatCell" id="2dT-hG-RME">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2dT-hG-RME" id="bXa-BR-yeW">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChatBubbleExpert" translatesAutoresizingMaskIntoConstraints="NO" id="K5w-7r-VPa">
+                                                    <rect key="frame" x="30" y="13" width="215" height="74"/>
+                                                    <rect key="contentStretch" x="0.5" y="0.5" width="0.0" height="0.0"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="215" id="Eze-fn-5ue"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您好！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaL-oE-yhf">
+                                                    <rect key="frame" x="45" y="13" width="215" height="74"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="K5w-7r-VPa" firstAttribute="leading" secondItem="bXa-BR-yeW" secondAttribute="leadingMargin" constant="22" id="2kz-sD-dxH"/>
+                                                <constraint firstItem="DaL-oE-yhf" firstAttribute="top" secondItem="K5w-7r-VPa" secondAttribute="top" id="6jO-n3-fZs"/>
+                                                <constraint firstItem="K5w-7r-VPa" firstAttribute="centerY" secondItem="bXa-BR-yeW" secondAttribute="centerY" id="EBj-Fp-J9R"/>
+                                                <constraint firstItem="DaL-oE-yhf" firstAttribute="trailing" secondItem="K5w-7r-VPa" secondAttribute="trailing" constant="15" id="FdZ-s1-dKD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="K5w-7r-VPa" secondAttribute="bottom" constant="5" id="OAN-Fc-3fr"/>
+                                                <constraint firstItem="DaL-oE-yhf" firstAttribute="leading" secondItem="K5w-7r-VPa" secondAttribute="leading" constant="15" id="RcK-Q6-5Gf"/>
+                                                <constraint firstItem="K5w-7r-VPa" firstAttribute="top" secondItem="bXa-BR-yeW" secondAttribute="topMargin" constant="5" id="d8w-NA-bhw"/>
+                                                <constraint firstItem="DaL-oE-yhf" firstAttribute="bottom" secondItem="K5w-7r-VPa" secondAttribute="bottom" id="dTe-Um-vhY"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomerChatCell" id="AiW-aX-IIU">
-                                        <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="128" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AiW-aX-IIU" id="hNg-jp-fs9">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChatBubbleCustomer" translatesAutoresizingMaskIntoConstraints="NO" id="iJi-P2-AqL">
+                                                    <rect key="frame" x="355" y="13" width="215" height="74"/>
+                                                    <rect key="contentStretch" x="0.5" y="0.5" width="0.0" height="0.0"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="215" id="uhZ-Cc-79b"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您好您好！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7s-5c-ef3">
+                                                    <rect key="frame" x="370" y="13" width="215" height="74"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iJi-P2-AqL" firstAttribute="top" secondItem="hNg-jp-fs9" secondAttribute="topMargin" constant="5" id="0bM-97-F1O"/>
+                                                <constraint firstItem="iJi-P2-AqL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hNg-jp-fs9" secondAttribute="leadingMargin" id="3DQ-UA-z91"/>
+                                                <constraint firstItem="r7s-5c-ef3" firstAttribute="bottom" secondItem="iJi-P2-AqL" secondAttribute="bottom" id="Hjv-Rg-jH7"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="iJi-P2-AqL" secondAttribute="bottom" constant="5" id="K7d-9o-CSy"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iJi-P2-AqL" secondAttribute="trailing" constant="22" id="SzY-Zh-orh"/>
+                                                <constraint firstItem="r7s-5c-ef3" firstAttribute="trailing" secondItem="iJi-P2-AqL" secondAttribute="trailing" constant="15" id="TI7-bw-U7W"/>
+                                                <constraint firstItem="iJi-P2-AqL" firstAttribute="centerY" secondItem="hNg-jp-fs9" secondAttribute="centerY" id="pau-mr-GdX"/>
+                                                <constraint firstItem="r7s-5c-ef3" firstAttribute="top" secondItem="iJi-P2-AqL" secondAttribute="top" id="vJv-Az-7wC"/>
+                                                <constraint firstItem="r7s-5c-ef3" firstAttribute="leading" secondItem="iJi-P2-AqL" secondAttribute="leading" constant="15" id="zge-hP-xQo"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateCell" id="Cug-7x-DnT">
-                                        <rect key="frame" x="0.0" y="116" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="228" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cug-7x-DnT" id="Swo-KX-M49">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 3分钟前 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpT-kr-44f">
+                                                    <rect key="frame" x="271" y="41" width="58" height="18"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="Zby-cE-eRE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zpT-kr-44f" firstAttribute="centerX" secondItem="Swo-KX-M49" secondAttribute="centerX" id="1S3-Kc-VJs"/>
+                                                <constraint firstItem="zpT-kr-44f" firstAttribute="centerY" secondItem="Swo-KX-M49" secondAttribute="centerY" id="VtT-pM-kpe"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
@@ -819,6 +889,8 @@ Cg
     </scenes>
     <resources>
         <image name="CallButton" width="40" height="40"/>
+        <image name="ChatBubbleCustomer" width="50" height="35"/>
+        <image name="ChatBubbleExpert" width="50" height="35"/>
         <image name="PhoneIcon" width="13" height="13"/>
         <image name="PictureIcon" width="23" height="19"/>
         <image name="ProfilePlaceholder" width="680" height="350"/>

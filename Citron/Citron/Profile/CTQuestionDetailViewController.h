@@ -14,6 +14,7 @@
 @property (nonatomic, nonnull) IBOutlet UILabel *contentLabel;
 @property (nonatomic, nonnull) IBOutlet UILabel *dateLabel;
 @property (nonatomic, nonnull) IBOutlet UIView *sepLine;
+@property (nonatomic, nonnull) IBOutlet UIView *bottomSepLine;
 @property (nonatomic, nonnull) IBOutlet UIButton *chatHistoryButton;
 @property (nonatomic, nonnull) IBOutlet UIImageView *profileImageView;
 @property (nonatomic, nonnull) IBOutlet UILabel *titleLabel;
