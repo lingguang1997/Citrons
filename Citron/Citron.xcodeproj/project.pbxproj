@@ -30,6 +30,7 @@
 		54579CEA1C931BB100DAB0A4 /* CTProfileMiscModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 54579CE91C931BB100DAB0A4 /* CTProfileMiscModule.m */; };
 		54579CED1C931CF100DAB0A4 /* CTProfileQuestionStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54579CEC1C931CF100DAB0A4 /* CTProfileQuestionStatusCell.m */; };
 		54579CF01C95D26000DAB0A4 /* CTBlankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54579CEF1C95D26000DAB0A4 /* CTBlankCell.m */; };
+		54A459551CA778BD00FB2A3B /* CTChatItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A459541CA778BD00FB2A3B /* CTChatItem.m */; };
 		54D370F91C9C5A4800E6871A /* CTExpertsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D370F81C9C5A4800E6871A /* CTExpertsListViewController.m */; };
 		54D370FC1CA24E0400E6871A /* CTChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D370FB1CA24E0400E6871A /* CTChatViewController.m */; };
 		CE00E0E11C487B0800E7474D /* CTStarExpertSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00E0E01C487B0800E7474D /* CTStarExpertSectionController.m */; };
@@ -282,6 +283,8 @@
 		54579CEC1C931CF100DAB0A4 /* CTProfileQuestionStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTProfileQuestionStatusCell.m; sourceTree = "<group>"; };
 		54579CEE1C95D26000DAB0A4 /* CTBlankCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBlankCell.h; sourceTree = "<group>"; };
 		54579CEF1C95D26000DAB0A4 /* CTBlankCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBlankCell.m; sourceTree = "<group>"; };
+		54A459531CA778BD00FB2A3B /* CTChatItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTChatItem.h; sourceTree = "<group>"; };
+		54A459541CA778BD00FB2A3B /* CTChatItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTChatItem.m; sourceTree = "<group>"; };
 		54D370F71C9C5A4800E6871A /* CTExpertsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTExpertsListViewController.h; path = Citron/Profile/CTExpertsListViewController.h; sourceTree = SOURCE_ROOT; };
 		54D370F81C9C5A4800E6871A /* CTExpertsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTExpertsListViewController.m; path = Citron/Profile/CTExpertsListViewController.m; sourceTree = SOURCE_ROOT; };
 		54D370FA1CA24E0400E6871A /* CTChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTChatViewController.h; path = Citron/Profile/CTChatViewController.h; sourceTree = SOURCE_ROOT; };
@@ -694,6 +697,8 @@
 				54579CD21C91DCFE00DAB0A4 /* CTProfileModule.m */,
 				54579CE81C931BB100DAB0A4 /* CTProfileMiscModule.h */,
 				54579CE91C931BB100DAB0A4 /* CTProfileMiscModule.m */,
+				54A459531CA778BD00FB2A3B /* CTChatItem.h */,
+				54A459541CA778BD00FB2A3B /* CTChatItem.m */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1011,6 +1016,7 @@
 				54579CD01C91BB6200DAB0A4 /* CTProfileStream.m in Sources */,
 				CE1319FE1C815FC600A4D78A /* CTTopicsView.m in Sources */,
 				54579CED1C931CF100DAB0A4 /* CTProfileQuestionStatusCell.m in Sources */,
+				54A459551CA778BD00FB2A3B /* CTChatItem.m in Sources */,
 				CE57D4DC1C43E23900DB72C4 /* UIFont+CTFont.m in Sources */,
 				541DC0E31C9850D600A37B82 /* CTQuestionTableViewCell.m in Sources */,
 				CED78F431C4EA0D600967CE7 /* CTRecommendedExpertCellAdapter.m in Sources */,

@@ -7,11 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CTChatItem.h"
 
-@interface CTChatViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
-    UITableView *chatTableView;
-    
+@interface CTChatViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>{
 }
 @property (nonatomic, nonnull) IBOutlet UIView *bottomView;
 @property (nonatomic, nonnull) IBOutlet UITextField *textField;
+@property (nonatomic, nonnull) IBOutlet UITableView *chatTableView;
+@end
+
+
+@interface CTChatViewExpertCell : UITableViewCell
+@property (nonatomic, nonnull) IBOutlet UILabel *chatTextLabel;
+@property (nonatomic, nonnull) IBOutlet UIImageView *backgroundBubbleView;
+- (void)updateCell:(nonnull CTChatItem *)item;
+@end
+
+@interface CTChatViewCustomerCell : UITableViewCell
+@property (nonatomic, nonnull) IBOutlet UILabel *chatTextLabel;
+@property (nonatomic, nonnull) IBOutlet UIImageView *backgroundBubbleView;
+- (void)updateCell:(nonnull CTChatItem *)item;
 @end
