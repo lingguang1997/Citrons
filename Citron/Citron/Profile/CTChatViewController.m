@@ -6,6 +6,8 @@
 //  Copyright © 2016年 iAskData. All rights reserved.
 //
 
+#import <AFNetworking/UIImageView+AFNetworking.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 #import "CTChatViewController.h"
 #import "CTChatItem.h"
 
@@ -24,11 +26,16 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
+    self.chatTableView.rowHeight = UITableViewAutomaticDimension;
+    self.chatTableView.estimatedRowHeight = 100.0;
+    
     CTChatItem *item1 = [[CTChatItem alloc] initWithText:@"你好！" date:[NSDate date] type:CTChatItemTypeCustomer];
     CTChatItem *item2 = [[CTChatItem alloc] initWithText:@"同学你好！" date:[NSDate date] type:CTChatItemTypeExpert];
     CTChatItem *item3 = [[CTChatItem alloc] initWithText:@"我特别好！" date:[NSDate date] type:CTChatItemTypeCustomer];
     CTChatItem *item4 = [[CTChatItem alloc] initWithText:@"你真的好！" date:[NSDate date] type:CTChatItemTypeExpert];
-    chats = [NSMutableArray arrayWithObjects:item1, item2, item3, item4, nil];
+    CTChatItem *item5 = [[CTChatItem alloc] initWithImageURL:@"https://img1.doubanio.com/view/photo/large/public/p2264598192.jpg" date:[NSDate date] type:CTChatItemTypeExpert];
+    CTChatItem *item6 = [[CTChatItem alloc] initWithText:@"妈妈 妈妈我被选上了 我被选为担任操作保护人类的eva驾驶员 是世界第一哦 这件事我还没告诉别人 不过我只告诉妈妈 那的人对我都好好 所以 我一点也不寂寞 因此 即使没有爸爸也没关系 我一点也不寂寞 所以妈妈 看看我吧 不要杀死我" date:[NSDate date] type:CTChatItemTypeCustomer];
+    chats = [NSMutableArray arrayWithObjects:item1, item2, item3, item4, item5, item6, nil];
     [_chatTableView reloadData];
  }
 
@@ -117,6 +124,23 @@
 #pragma mark - Image Picker Delegate methods
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    NSURL *imageURL = info[UIImagePickerControllerReferenceURL];
+    
+    ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
+    {
+        CGImageRef imageRef = myasset.thumbnail;
+        UIImage *thumbImage = [UIImage imageWithCGImage:imageRef];
+        CTChatItem *item = [[CTChatItem alloc] initWithImage:thumbImage date:[NSDate date] type:CTChatItemTypeCustomer];
+        [chats addObject:item];
+        [_chatTableView reloadData];
+    };
+    
+    ALAssetsLibrary* assetslibrary = [[ALAssetsLibrary alloc] init];
+    [assetslibrary assetForURL:imageURL
+                   resultBlock:resultblock
+                  failureBlock:nil];
+    
+    
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -151,13 +175,23 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
     if (self) {
-        
+        _chatImageView.clipsToBounds = YES;
     }
     return self;
 }
 
 - (void)updateCell:(CTChatItem *)item{
-    _chatTextLabel.text = item.text;
+    if (item.imageURL != nil) {
+        [_chatImageView setImageWithURL:[NSURL URLWithString:item.imageURL]];
+        _chatTextLabel.text = nil;
+    }else if (item.image != nil){
+        [_chatImageView setImage:item.image];
+        _chatTextLabel.text = nil;
+    }
+    else{
+        _chatTextLabel.text = item.text;
+        _chatImageView.image = nil;
+    }
 }
 
 @end
@@ -168,13 +202,23 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
     if (self) {
-        
+        _chatImageView.clipsToBounds = YES;
     }
     return self;
 }
 
 -(void)updateCell:(CTChatItem *)item{
-    _chatTextLabel.text = item.text;
+    if (item.imageURL != nil) {
+        [_chatImageView setImageWithURL:[NSURL URLWithString:item.imageURL]];
+        _chatTextLabel.text = nil;
+    }else if (item.image != nil){
+        [_chatImageView setImage:item.image];
+        _chatTextLabel.text = nil;
+    }
+    else{
+        _chatTextLabel.text = item.text;
+        _chatImageView.image = nil;
+    }
 }
 
 @end

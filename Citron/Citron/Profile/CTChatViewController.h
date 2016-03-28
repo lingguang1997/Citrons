@@ -20,11 +20,13 @@
 @interface CTChatViewExpertCell : UITableViewCell
 @property (nonatomic, nonnull) IBOutlet UILabel *chatTextLabel;
 @property (nonatomic, nonnull) IBOutlet UIImageView *backgroundBubbleView;
+@property (nonatomic, nonnull) IBOutlet UIImageView *chatImageView;
 - (void)updateCell:(nonnull CTChatItem *)item;
 @end
 
 @interface CTChatViewCustomerCell : UITableViewCell
 @property (nonatomic, nonnull) IBOutlet UILabel *chatTextLabel;
 @property (nonatomic, nonnull) IBOutlet UIImageView *backgroundBubbleView;
+@property (nonatomic, nonnull) IBOutlet UIImageView *chatImageView;
 - (void)updateCell:(nonnull CTChatItem *)item;
 @end

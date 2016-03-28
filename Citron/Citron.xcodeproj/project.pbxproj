@@ -11,6 +11,7 @@
 		541DC0E31C9850D600A37B82 /* CTQuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 541DC0E21C9850D600A37B82 /* CTQuestionTableViewCell.m */; };
 		541DC0E61C98F64D00A37B82 /* CTMyQuestionsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541DC0E51C98F64D00A37B82 /* CTMyQuestionsStoryBoard.storyboard */; };
 		541DC0EC1C9971D600A37B82 /* CTQuestionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 541DC0EB1C9971D600A37B82 /* CTQuestionDetailViewController.m */; };
+		544944BC1CA8D838009A993F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 544944BB1CA8D838009A993F /* AssetsLibrary.framework */; };
 		54579CB81C8FDB9800DAB0A4 /* CTProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54579CB71C8FDB9800DAB0A4 /* CTProfileViewController.m */; };
 		54579CBB1C8FF3E400DAB0A4 /* CTProfileSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54579CBA1C8FF3E400DAB0A4 /* CTProfileSectionController.m */; };
 		54579CBE1C8FFC6C00DAB0A4 /* CTProfileCoverCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54579CBD1C8FFC6C00DAB0A4 /* CTProfileCoverCellAdapter.m */; };
@@ -245,6 +246,7 @@
 		541DC0E51C98F64D00A37B82 /* CTMyQuestionsStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTMyQuestionsStoryBoard.storyboard; sourceTree = "<group>"; };
 		541DC0EA1C9971D600A37B82 /* CTQuestionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTQuestionDetailViewController.h; path = Citron/Profile/CTQuestionDetailViewController.h; sourceTree = SOURCE_ROOT; };
 		541DC0EB1C9971D600A37B82 /* CTQuestionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTQuestionDetailViewController.m; path = Citron/Profile/CTQuestionDetailViewController.m; sourceTree = SOURCE_ROOT; };
+		544944BB1CA8D838009A993F /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		54579CB61C8FDB9800DAB0A4 /* CTProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTProfileViewController.h; path = Citron/Profile/CTProfileViewController.h; sourceTree = SOURCE_ROOT; };
 		54579CB71C8FDB9800DAB0A4 /* CTProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTProfileViewController.m; path = Citron/Profile/CTProfileViewController.m; sourceTree = SOURCE_ROOT; };
 		54579CB91C8FF3E400DAB0A4 /* CTProfileSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTProfileSectionController.h; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				544944BC1CA8D838009A993F /* AssetsLibrary.framework in Frameworks */,
 				CEB4679E1C85FB6700F28395 /* AFNetworking.framework in Frameworks */,
 				CEF1F5A51C50BFCF0062B243 /* SystemConfiguration.framework in Frameworks */,
 				CEF1F5A31C50BFBC0062B243 /* CoreTelephony.framework in Frameworks */,
@@ -604,6 +607,7 @@
 		CE57D4A41C4391B400DB72C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				544944BB1CA8D838009A993F /* AssetsLibrary.framework */,
 				CEB4679D1C85FB6700F28395 /* AFNetworking.framework */,
 				CE6CAFC21C6CE96D0068BBC1 /* AFNetworking.framework */,
 				CEF1F5AB1C50C2D20062B243 /* libsqlite3.dylib */,
